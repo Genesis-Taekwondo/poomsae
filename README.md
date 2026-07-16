@@ -1,4 +1,5 @@
 # <img src="public/poomsae-logo.jpeg" alt="poomsae logo" width="28" style="vertical-align:middle; margin-right:8px; border-radius:50%"> poomsae
+[![CI](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml/badge.svg)](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml)
 A simple web app for training with Kukkiwon/WT style poomsae, or forms.
 
 Node version
@@ -11,7 +12,7 @@ nvm install 22
 nvm use 22
 ```
 
-The repository's `.nvmrc` requests the `22` major (latest 22.x) and CI accepts `>=22` so newer Node 23/24+ will also work.
+The repository's `.nvmrc` requests the `22` major (latest 22.x) and CI requires `22.x` so any Node `22.x` version will also work.
 
 Testing
 -------
