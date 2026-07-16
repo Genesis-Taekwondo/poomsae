@@ -1,8 +1,10 @@
 export default {
-  root: true,
-  env: {
+  languageOptions: {
+    ecmaVersion: 2024,
+    sourceType: 'module',
+  },
+  environments: {
     node: true,
-    es2024: true,
   },
   rules: {
     'no-unused-vars': 'warn',
