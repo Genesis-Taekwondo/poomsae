@@ -1,0 +1,4 @@
+# CODEOWNERS
+# Specify who owns the repository. Pattern first, then owner (email allowed).
+# This makes Brian Shef the owner for all files.
+* brianshef@outlook.com
