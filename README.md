@@ -2,6 +2,8 @@
 [![CI](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml/badge.svg)](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml)
 A simple web app for training with Kukkiwon/WT style poomsae, or forms.
 
+## Live Demo at [https://poomsae.onrender.com/](https://poomsae.onrender.com/)
+
 Node version
 ------------
 
@@ -31,6 +33,19 @@ npm run build:css
 # run the test suite
 npm test
 ```
+
+Running Locally
+-------
+
+To run the application locally:
+
+```bash
+# Start the server
+npm run start
+```
+
+By default, the application uses port 3000. Open your browser to http://localhost:3000 once the server has started to view the application.
+
 
 Notes:
 - The test harness requires the project dependencies (dev deps) to be installed.
