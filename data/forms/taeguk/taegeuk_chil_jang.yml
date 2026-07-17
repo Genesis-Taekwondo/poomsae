@@ -1,0 +1,77 @@
+name: Taegeuk Chil Jang
+korean: null
+group: Taegeuk
+number: 7
+meaning: null
+trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
+  parallel lines. On each line, a 180 degree turn is performed.
+rank: null
+lines: 3
+movement_count: 8
+techniques_introduced:
+  - This form begins with a tiger stance. In Korean culture, tigers are
+    associated with life in the mountains; the prominence of the tiger stance in
+    this form is an example of the "mountain" motif being represented in the
+    form's movements.
+  - Low double knifehand block (also called low augmented knifehand block)
+  - A palm block and a backfist strike, both performed on a supporting arm
+  - A scissors block (i.e., simultaneous low block and outside block)
+  - Shoulder-height opening block
+  - Strike to the abdomen using the knee
+  - A hinge-block chamber leading up to a low cross block. This is the first
+    block seen in the Taegeuk poomsae that is not a "deflecting" block. In other
+    words, this block traps an attack rather than deflecting it; this is an
+    example of an "unyielding/immovable" movement in this form.
+  - Target kick
+movements:
+  - step: "1"
+    direction: null
+    stance: null
+    technique: This form begins with a tiger stance. In Korean culture, tigers are
+      associated with life in the mountains; the prominence of the tiger stance
+      in this form is an example of the "mountain" motif being represented in
+      the form's movements.
+    notes: null
+  - step: "2"
+    direction: null
+    stance: null
+    technique: Low double knifehand block (also called low augmented knifehand block)
+    notes: null
+  - step: "3"
+    direction: null
+    stance: null
+    technique: A palm block and a backfist strike, both performed on a supporting arm
+    notes: null
+  - step: "4"
+    direction: null
+    stance: null
+    technique: A scissors block (i.e., simultaneous low block and outside block)
+    notes: null
+  - step: "5"
+    direction: null
+    stance: null
+    technique: Shoulder-height opening block
+    notes: null
+  - step: "6"
+    direction: null
+    stance: null
+    technique: Strike to the abdomen using the knee
+    notes: null
+  - step: "7"
+    direction: null
+    stance: null
+    technique: A hinge-block chamber leading up to a low cross block. This is the
+      first block seen in the Taegeuk poomsae that is not a "deflecting" block.
+      In other words, this block traps an attack rather than deflecting it; this
+      is an example of an "unyielding/immovable" movement in this form.
+    notes: null
+  - step: "8"
+    direction: null
+    stance: null
+    technique: Target kick
+    notes: null
+sources:
+  - title: "Wikipedia: Taegeuk Chil Jang"
+    url: https://en.wikipedia.org/wiki/Taegeuk_Chil_Jang
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

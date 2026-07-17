@@ -1,0 +1,54 @@
+name: Taegeuk Yook Jang
+korean: null
+group: Taegeuk
+number: 6
+meaning: null
+trigram: The floor pattern (or yeonmuseon) of each taegeuk poomsae is three
+  parallel lines. On each line, a 180 degree turn is performed.
+rank: null
+lines: 3
+movement_count: 3
+techniques_introduced:
+  - 'The movements up the stem begin and conclude with two new techniques: a
+    twist block followed by a roundhouse kick. These create an almost "circular"
+    method for turning from one line to the next, unlike the hard right-angle
+    turns seen in prior forms. This is an example of the "fluid" nature of the
+    movements in this form.'
+  - 'The final movements of the form also include two new techniques: the palm
+    blocks, and the rearward steps into back stance and front stance. This is
+    the only Taegeuk poomsae with rearward stepping motions. This too is an
+    example of the "fluid" nature of the form, as the practitioner is "flowing"
+    backward to his or her source (the beginning position of the form), like
+    water flowing downhill.'
+  - The center of the form is a slow (performed to an 8-count) low opening block.
+movements:
+  - step: "1"
+    direction: null
+    stance: null
+    technique: 'The movements up the stem begin and conclude with two new
+      techniques: a twist block followed by a roundhouse kick. These create an
+      almost "circular" method for turning from one line to the next, unlike the
+      hard right-angle turns seen in prior forms. This is an example of the
+      "fluid" nature of the movements in this form.'
+    notes: null
+  - step: "2"
+    direction: null
+    stance: null
+    technique: 'The final movements of the form also include two new techniques: the
+      palm blocks, and the rearward steps into back stance and front stance.
+      This is the only Taegeuk poomsae with rearward stepping motions. This too
+      is an example of the "fluid" nature of the form, as the practitioner is
+      "flowing" backward to his or her source (the beginning position of the
+      form), like water flowing downhill.'
+    notes: null
+  - step: "3"
+    direction: null
+    stance: null
+    technique: The center of the form is a slow (performed to an 8-count) low
+      opening block.
+    notes: null
+sources:
+  - title: "Wikipedia: Taegeuk Yook Jang"
+    url: https://en.wikipedia.org/wiki/Taegeuk_Yook_Jang
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

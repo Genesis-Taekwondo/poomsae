@@ -1,0 +1,16 @@
+name: Taebaek
+korean: null
+group: Other
+number: null
+meaning: null
+trigram: null
+rank: null
+lines: 3
+movement_count: 0
+techniques_introduced: []
+movements: []
+sources:
+  - title: "Wikipedia: Taebaek"
+    url: https://en.wikipedia.org/wiki/Taebaek
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

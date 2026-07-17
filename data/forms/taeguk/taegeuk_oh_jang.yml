@@ -1,0 +1,43 @@
+name: Taegeuk Oh Jang
+korean: null
+group: Taegeuk
+number: 5
+meaning: null
+trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
+  parallel lines. On each line, a 180 degree turn is performed.
+rank: null
+lines: 3
+movement_count: 2
+techniques_introduced:
+  - One focus of this form is the introduction of elbow strikes of various
+    types. Along the top line, chin-height elbow strikes are assisted by a
+    supporting hand. Along the middle line, the off-hand is used as a target for
+    elbow strikes at solar-plexus height.
+  - The side kicks along the middle line are augmented with a simultaneous hand
+    strike. Some schools teach that this strike is a punch, other schools teach
+    that this strike is a horizontal hammerfist, yet other schools teach that
+    the extended arm symbolizes grabbing the opponent and preparing to pull him
+    in to the elbow strike that follows next.
+movements:
+  - step: "1"
+    direction: null
+    stance: null
+    technique: One focus of this form is the introduction of elbow strikes of
+      various types. Along the top line, chin-height elbow strikes are assisted
+      by a supporting hand. Along the middle line, the off-hand is used as a
+      target for elbow strikes at solar-plexus height.
+    notes: null
+  - step: "2"
+    direction: null
+    stance: null
+    technique: The side kicks along the middle line are augmented with a
+      simultaneous hand strike. Some schools teach that this strike is a punch,
+      other schools teach that this strike is a horizontal hammerfist, yet other
+      schools teach that the extended arm symbolizes grabbing the opponent and
+      preparing to pull him in to the elbow strike that follows next.
+    notes: null
+sources:
+  - title: "Wikipedia: Taegeuk Oh Jang"
+    url: https://en.wikipedia.org/wiki/Taegeuk_Oh_Jang
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

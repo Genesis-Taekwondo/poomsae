@@ -1,0 +1,20 @@
+name: Palgwe Il Jang
+korean: null
+group: Palgwe
+number: 1
+meaning: null
+trigram: null
+rank: null
+lines: 3
+movement_count: 0
+techniques_introduced: []
+movements: []
+sources:
+  - title: "Wikipedia: Taekwondo forms"
+    url: https://en.wikipedia.org/wiki/Taekwondo_forms
+    license: CC BY-SA 3.0
+  - title: "Wikipedia: Hyeong"
+    url: https://en.wikipedia.org/wiki/Hyeong
+    license: CC BY-SA 3.0
+notes: No dedicated Wikipedia article found for this form; metadata drafted from
+  related Wikipedia lists and should be cross-checked with Kukkiwon sources.
