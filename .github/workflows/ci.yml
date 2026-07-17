@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  lint:
+    name: Lint JavaScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run ESLint
+        run: |
+          npx eslint --version
+          npm run lint
+
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
+
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Tailwind CSS
+        run: npm run build:css
+      - name: Start server and verify
+        run: |
+          # start the server in background
+          node server.js &
+          SERVER_PID=$!
+          # wait for server to start
+          sleep 2
+          curl -sSf http://localhost:3000
+          kill $SERVER_PID
