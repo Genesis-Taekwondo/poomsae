@@ -1,0 +1,19 @@
+name: string
+korean: string
+group: Taegeuk | Palgwe | Yudanja | Other
+number: int
+meaning: string          # symbolic meaning (trigram, element, etc.)
+trigram: string          # e.g. "Geon ☰ — Heaven" (Taegeuk/Palgwe only)
+rank: string             # geup/dan associated with the form
+lines: int
+movement_count: int
+techniques_introduced: [string]
+movements:
+  - step: "1" | "1a"
+    direction: string    # e.g. "turn left 90°", "step forward"
+    stance: string
+    technique: string
+    notes: string | null  # e.g. "kihap", "8 second count"
+sources:
+  - title, url, license
+notes: string | null

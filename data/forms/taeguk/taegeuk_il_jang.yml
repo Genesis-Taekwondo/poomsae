@@ -1,0 +1,59 @@
+name: Taegeuk Il Jang
+korean: null
+group: Taegeuk
+number: 1
+meaning: null
+trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
+  parallel lines. On each line, a 180 degree turn is performed.
+rank: null
+lines: 3
+movement_count: 7
+techniques_introduced:
+  - Walking stance
+  - Long front stance
+  - Low block
+  - Inside middle block
+  - High block
+  - Middle punch
+  - Front snap kick
+movements:
+  - step: "1"
+    direction: step forward
+    stance: walking stance
+    technique: Walking stance
+    notes: null
+  - step: "2"
+    direction: step forward
+    stance: long front stance
+    technique: Long front stance
+    notes: null
+  - step: "3"
+    direction: step forward
+    stance: front stance
+    technique: Low block
+    notes: null
+  - step: "4"
+    direction: step forward
+    stance: front stance
+    technique: Inside middle block
+    notes: null
+  - step: "5"
+    direction: step forward
+    stance: front stance
+    technique: High block
+    notes: null
+  - step: "6"
+    direction: step forward
+    stance: front stance
+    technique: Middle punch
+    notes: null
+  - step: "7"
+    direction: step forward
+    stance: front stance
+    technique: Front snap kick
+    notes: null
+sources:
+  - title: "Wikipedia: Taegeuk Il Jang"
+    url: https://en.wikipedia.org/wiki/Taegeuk_Il_Jang
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

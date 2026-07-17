@@ -1,0 +1,54 @@
+name: Taegeuk Sa Jang
+korean: null
+group: Taegeuk
+number: 4
+meaning: null
+trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
+  parallel lines. On each line, a 180 degree turn is performed.
+rank: null
+lines: 3
+movement_count: 3
+techniques_introduced:
+  - The form begins by introducing the double knifehand block, also called an
+    augmented outside knifehand block. This technique is a staple of subsequent
+    Taegeuk poomsae.
+  - The spearhead thrust, the side kick, and the swallowform strike (a
+    simultaneous knifehand high block and knifehand neck strike) are also
+    introduced in this form.
+  - Most notably, this poomsae places an increased emphasis on the advanced
+    technique of "chambering" for the next movement while still performing the
+    previous movement. In this context, the word chamber means to position one's
+    arms and legs in preparation for an upcoming movement. As an example, when
+    performing the final of two side kicks, the practitioner must chamber for a
+    double knifehand block while still in the process of completing the kick.
+movements:
+  - step: "1"
+    direction: null
+    stance: null
+    technique: The form begins by introducing the double knifehand block, also
+      called an augmented outside knifehand block. This technique is a staple of
+      subsequent Taegeuk poomsae.
+    notes: null
+  - step: "2"
+    direction: null
+    stance: null
+    technique: The spearhead thrust, the side kick, and the swallowform strike (a
+      simultaneous knifehand high block and knifehand neck strike) are also
+      introduced in this form.
+    notes: null
+  - step: "3"
+    direction: null
+    stance: null
+    technique: Most notably, this poomsae places an increased emphasis on the
+      advanced technique of "chambering" for the next movement while still
+      performing the previous movement. In this context, the word chamber means
+      to position one's arms and legs in preparation for an upcoming movement.
+      As an example, when performing the final of two side kicks, the
+      practitioner must chamber for a double knifehand block while still in the
+      process of completing the kick.
+    notes: null
+sources:
+  - title: "Wikipedia: Taegeuk Sa Jang"
+    url: https://en.wikipedia.org/wiki/Taegeuk_Sa_Jang
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

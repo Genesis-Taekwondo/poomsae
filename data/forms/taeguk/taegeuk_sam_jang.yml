@@ -1,0 +1,43 @@
+name: Taegeuk Sam Jang
+korean: null
+group: Taegeuk
+number: 3
+meaning: null
+trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
+  parallel lines. On each line, a 180 degree turn is performed.
+rank: null
+lines: 3
+movement_count: 4
+techniques_introduced:
+  - neck-high knifehand strike (sometimes called a "neck slice")
+  - knifehand outward block
+  - a front kick followed by a double-punch (seen first at the beginning of the
+    form)
+  - a low block, kick, punch combination (seen at the conclusion of the form)
+movements:
+  - step: "1"
+    direction: null
+    stance: null
+    technique: neck-high knifehand strike (sometimes called a "neck slice")
+    notes: null
+  - step: "2"
+    direction: null
+    stance: null
+    technique: knifehand outward block
+    notes: null
+  - step: "3"
+    direction: null
+    stance: null
+    technique: a front kick followed by a double-punch (seen first at the beginning
+      of the form)
+    notes: null
+  - step: "4"
+    direction: null
+    stance: null
+    technique: a low block, kick, punch combination (seen at the conclusion of the form)
+    notes: null
+sources:
+  - title: "Wikipedia: Taegeuk Sam Jang"
+    url: https://en.wikipedia.org/wiki/Taegeuk_Sam_Jang
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

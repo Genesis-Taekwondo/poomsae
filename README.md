@@ -1,8 +1,11 @@
 # <img src="public/poomsae-logo.jpeg" alt="poomsae logo" width="28" style="vertical-align:middle; margin-right:8px; border-radius:50%"> poomsae
-[![CI](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml/badge.svg)](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml)
+
 A simple web app for training with Kukkiwon/WT style poomsae, or forms.
 
-## Live Demo at [https://poomsae.onrender.com/](https://poomsae.onrender.com/)
+[![CI](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml/badge.svg)](https://github.com/Genesis-Taekwondo/poomsae/actions/workflows/ci.yml)
+<a href='https://ko-fi.com/Y8Y56BPH' target='_blank'><img height='1.7em' style='border:0px;height:1.7em;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+## Live Demo at [https://poomsae.onrender.com/](https://poomsae.onrender.com/) 
 
 Node version
 ------------

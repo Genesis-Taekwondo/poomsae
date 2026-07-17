@@ -1,0 +1,43 @@
+name: Taegeuk Pal Jang
+korean: null
+group: Taegeuk
+number: 8
+meaning: null
+trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
+  parallel lines. On each line, a 180 degree turn is performed.
+rank: null
+lines: 3
+movement_count: 4
+techniques_introduced:
+  - Augmented outside blocks, at both medium and low heights
+  - Cross stance, used as a transitional movement on the third line
+  - Half Mountain block
+  - Forward-facing double knifehand block, as seen in the tiger stance movements
+    on the middle line
+movements:
+  - step: "1"
+    direction: null
+    stance: null
+    technique: Augmented outside blocks, at both medium and low heights
+    notes: null
+  - step: "2"
+    direction: null
+    stance: null
+    technique: Cross stance, used as a transitional movement on the third line
+    notes: null
+  - step: "3"
+    direction: null
+    stance: null
+    technique: Half Mountain block
+    notes: null
+  - step: "4"
+    direction: null
+    stance: null
+    technique: Forward-facing double knifehand block, as seen in the tiger stance
+      movements on the middle line
+    notes: null
+sources:
+  - title: "Wikipedia: Taegeuk Pal Jang"
+    url: https://en.wikipedia.org/wiki/Taegeuk_Pal_Jang
+    license: CC BY-SA 3.0
+notes: Draft dataset bootstrapped from Wikipedia article content.

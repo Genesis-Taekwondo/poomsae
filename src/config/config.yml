@@ -1,0 +1,94 @@
+app:
+  name: poomsae
+  title: Poomsae
+  description: A simple web app for training with Kukkiwon/WT style poomsae forms
+server:
+  host: localhost
+  port: 3000
+  static_dir: public
+ui:
+  title: Poomsae
+  description: Training with Kukkiwon/WT style poomsae forms
+data:
+  forms_dir: data/forms
+logging:
+  level: info
+forms:
+  - taeguk:
+      - name: Taegeuk Il Jang
+        file: data/forms/taeguk/taegeuk_il_jang.yml
+        enabled: true
+      - name: Taegeuk Ee Jang
+        file: data/forms/taeguk/taegeuk_ee_jang.yml
+        enabled: true
+      - name: Taegeuk Sam Jang
+        file: data/forms/taeguk/taegeuk_sam_jang.yml
+        enabled: false
+      - name: Taegeuk Sa Jang
+        file: data/forms/taeguk/taegeuk_sa_jang.yml
+        enabled: false
+      - name: Taegeuk Oh Jang
+        file: data/forms/taeguk/taegeuk_oh_jang.yml
+        enabled: false
+      - name: Taegeuk Yook Jang
+        file: data/forms/taeguk/taegeuk_yook_jang.yml
+        enabled: false
+      - name: Taegeuk Chil Jang
+        file: data/forms/taeguk/taegeuk_chil_jang.yml
+        enabled: false
+      - name: Taegeuk Pal Jang
+        file: data/forms/taeguk/taegeuk_pal_jang.yml
+        enabled: false
+  - palgwe:
+      - name: Palgwe Il Jang
+        file: data/forms/palgwe/palgwe_il_jang.yml
+        enabled: false
+      - name: Palgwe Ee Jang
+        file: data/forms/palgwe/palgwe_ee_jang.yml
+        enabled: false
+      - name: Palgwe Sam Jang
+        file: data/forms/palgwe/palgwe_sam_jang.yml
+        enabled: false
+      - name: Palgwe Sa Jang
+        file: data/forms/palgwe/palgwe_sa_jang.yml
+        enabled: false
+      - name: Palgwe Oh Jang
+        file: data/forms/palgwe/palgwe_oh_jang.yml
+        enabled: false
+      - name: Palgwe Yook Jang
+        file: data/forms/palgwe/palgwe_yook_jang.yml
+        enabled: false
+      - name: Palgwe Chil Jang
+        file: data/forms/palgwe/palgwe_chil_jang.yml
+        enabled: false
+      - name: Palgwe Pal Jang
+        file: data/forms/palgwe/palgwe_pal_jang.yml
+        enabled: false
+  - other:
+      - name: Koryo
+        file: data/forms/other/koryo.yml
+        enabled: false
+      - name: Keumgang
+        file: data/forms/other/keumgang.yml
+        enabled: false
+      - name: Taebaek
+        file: data/forms/other/taebaek.yml
+        enabled: false
+      - name: Pyongwon
+        file: data/forms/other/pyongwon.yml
+        enabled: false
+      - name: Sipjin
+        file: data/forms/other/sipjin.yml
+        enabled: false
+      - name: Jitae
+        file: data/forms/other/jitae.yml
+        enabled: false
+      - name: Cheonkwon
+        file: data/forms/other/cheonkwon.yml
+        enabled: false
+      - name: Hansu
+        file: data/forms/other/hansu.yml
+        enabled: false
+      - name: Ilyeo
+        file: data/forms/other/ilyeo.yml
+        enabled: false
