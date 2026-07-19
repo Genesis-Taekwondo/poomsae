@@ -29,10 +29,10 @@ forms:
         enabled: true
       - name: Taegeuk Oh Jang
         file: data/forms/taeguk/taegeuk_oh_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Yook Jang
         file: data/forms/taeguk/taegeuk_yook_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Chil Jang
         file: data/forms/taeguk/taegeuk_chil_jang.yml
         enabled: false

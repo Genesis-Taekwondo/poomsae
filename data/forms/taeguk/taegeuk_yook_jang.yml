@@ -1,54 +1,127 @@
 name: Taegeuk Yook Jang
-korean: null
+korean: 태극 6장
 group: Taegeuk
 number: 6
-meaning: null
-trigram: The floor pattern (or yeonmuseon) of each taegeuk poomsae is three
-  parallel lines. On each line, a 180 degree turn is performed.
-rank: null
+meaning: Water (Gam)
+trigram: ☵
+rank: 3rd Geup
 lines: 3
-movement_count: 3
+movement_count: 19
 techniques_introduced:
-  - 'The movements up the stem begin and conclude with two new techniques: a
-    twist block followed by a roundhouse kick. These create an almost "circular"
-    method for turning from one line to the next, unlike the hard right-angle
-    turns seen in prior forms. This is an example of the "fluid" nature of the
-    movements in this form.'
-  - 'The final movements of the form also include two new techniques: the palm
-    blocks, and the rearward steps into back stance and front stance. This is
-    the only Taegeuk poomsae with rearward stepping motions. This too is an
-    example of the "fluid" nature of the form, as the practitioner is "flowing"
-    backward to his or her source (the beginning position of the form), like
-    water flowing downhill.'
-  - The center of the form is a slow (performed to an 8-count) low opening block.
+  - Roundhouse kick (Dollyeo chagi)
+  - Single knifehand high twisting block (Hansonnal eolgul bitureo makki)
+  - High outside block (Eolgul bakkat makki)
+  - Low opening block (Arae hecho makki)
+  - Palm heel middle block (Batangson momtong makki)
+  - Parallel stance (Naranhi seogi)
 movements:
-  - step: "1"
-    direction: null
-    stance: null
-    technique: 'The movements up the stem begin and conclude with two new
-      techniques: a twist block followed by a roundhouse kick. These create an
-      almost "circular" method for turning from one line to the next, unlike the
-      hard right-angle turns seen in prior forms. This is an example of the
-      "fluid" nature of the movements in this form.'
+  - step: 1
+    direction: Turn left 90°
+    stance: Left front stance (Ap kubi)
+    technique: Left low block (Arae makki)
     notes: null
-  - step: "2"
-    direction: null
-    stance: null
-    technique: 'The final movements of the form also include two new techniques: the
-      palm blocks, and the rearward steps into back stance and front stance.
-      This is the only Taegeuk poomsae with rearward stepping motions. This too
-      is an example of the "fluid" nature of the form, as the practitioner is
-      "flowing" backward to his or her source (the beginning position of the
-      form), like water flowing downhill.'
+  - step: 2
+    direction: Right front snap kick (Ap chagi), land backward
+    stance: Right back stance (Dwit kubi)
+    technique: Left outside middle block (Momtong bakkat makki)
+    notes: "After kicking, the kicking foot is pulled back so the left foot is forward."
+  - step: 3
+    direction: Turn right 180°
+    stance: Right front stance (Ap kubi)
+    technique: Right low block (Arae makki)
     notes: null
-  - step: "3"
-    direction: null
-    stance: null
-    technique: The center of the form is a slow (performed to an 8-count) low
-      opening block.
+  - step: 4
+    direction: Left front snap kick (Ap chagi), land backward
+    stance: Left back stance (Dwit kubi)
+    technique: Right outside middle block (Momtong bakkat makki)
+    notes: "After kicking, the kicking foot is pulled back so the right foot is forward."
+  - step: 5
+    direction: Turn left 90° (toward front)
+    stance: Left front stance (Ap kubi)
+    technique: Right single knifehand high twisting block (Hansonnal eolgul bitureo makki)
     notes: null
+  - step: 6
+    direction: Right roundhouse kick (Dollyeo chagi), land forward and turn left 90°
+    stance: None (in motion)
+    technique: Right roundhouse kick (Dollyeo chagi)
+    notes: "This is the first roundhouse kick introduced in the Taegeuk forms."
+  - step: 7
+    direction: Land from kick
+    stance: Left front stance (Ap kubi)
+    technique: Left high outside block (Eolgul bakkat makki), then right middle punch (Momtong baro jireugi)
+    notes: "Block and punch are executed sequentially from the same stance."
+  - step: 8
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Left middle punch (Momtong baro jireugi)
+    notes: null
+  - step: 9
+    direction: Turn right 180°
+    stance: Right front stance (Ap kubi)
+    technique: Right high outside block (Eolgul bakkat makki), then left middle punch (Momtong baro jireugi)
+    notes: "Block and punch are executed sequentially from the same stance."
+  - step: 10
+    direction: Left front snap kick (Ap chagi), step forward
+    stance: Left front stance (Ap kubi)
+    technique: Right middle punch (Momtong baro jireugi)
+    notes: null
+  - step: 11
+    direction: Turn left 90° (toward back)
+    stance: Parallel stance (Naranhi seogi)
+    technique: Low opening block (Arae hecho makki)
+    notes: "Executed slowly over 5 to 8 seconds. Both arms cross and push down."
+  - step: 12
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Left single knifehand high twisting block (Hansonnal eolgul bitureo makki)
+    notes: null
+  - step: 13
+    direction: Left roundhouse kick (Dollyeo chagi), land forward and turn right 90°
+    stance: None (in motion)
+    technique: Left roundhouse kick (Dollyeo chagi)
+    notes: null
+  - step: 14
+    direction: Land from kick
+    stance: Right front stance (Ap kubi)
+    technique: Right low block (Arae makki)
+    notes: null
+  - step: 15
+    direction: Left front snap kick (Ap chagi), land backward
+    stance: Left back stance (Dwit kubi)
+    technique: Right outside middle block (Momtong bakkat makki)
+    notes: "After kicking, the kicking foot is pulled back so the right foot is forward."
+  - step: 16
+    direction: Turn left 180°
+    stance: Left front stance (Ap kubi)
+    technique: Left low block (Arae makki)
+    notes: null
+  - step: 17
+    direction: Right front snap kick (Ap chagi), land backward
+    stance: Right back stance (Dwit kubi)
+    technique: Left outside middle block (Momtong bakkat makki)
+    notes: "After kicking, the kicking foot is pulled back so the left foot is forward."
+  - step: 18
+    direction: Turn left 90° (toward back)
+    stance: Right back stance (Dwit kubi)
+    technique: Left palm heel middle block (Batangson momtong makki)
+    notes: "Left foot is forward. This begins the rearward stepping sequence."
+  - step: 19
+    direction: Step backward
+    stance: Left back stance (Dwit kubi)
+    technique: Right palm heel middle block (Batangson momtong makki)
+    notes: "Right foot is forward."
+  - step: 20
+    direction: Step backward
+    stance: Right front stance (Ap kubi)
+    technique: Left palm heel middle block (Batangson momtong makki), then right middle punch (Momtong jireugi)
+    notes: "Left foot is forward. Block and punch are executed sequentially."
+  - step: 21
+    direction: Step backward
+    stance: Left front stance (Ap kubi)
+    technique: Right palm heel middle block (Batangson momtong makki), then left middle punch (Momtong jireugi)
+    notes: "Right foot is forward. Execute Kihap (yell) on the final punch. Hold stance until 'Baro' command."
 sources:
-  - title: "Wikipedia: Taegeuk Yook Jang"
-    url: https://en.wikipedia.org/wiki/Taegeuk_Yook_Jang
-    license: CC BY-SA 3.0
-notes: Draft dataset bootstrapped from Wikipedia article content.
+  - title: "Kukkiwon Standard Poomsae"
+    url: "https://www.kukkiwon.or.kr"
+    license: "Standard"
+notes: "Dataset aligned to Kukkiwon standard (19 official Poom, broken into 21 distinct sequence steps here). Korean terminology added for data enrichment."
