@@ -1,77 +1,154 @@
 name: Taegeuk Chil Jang
-korean: null
+korean: 태극 7장
 group: Taegeuk
 number: 7
-meaning: null
-trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
-  parallel lines. On each line, a 180 degree turn is performed.
-rank: null
+meaning: Mountain (Gan)
+trigram: ☶
+rank: 2nd Geup
 lines: 3
-movement_count: 8
+movement_count: 25
 techniques_introduced:
-  - This form begins with a tiger stance. In Korean culture, tigers are
-    associated with life in the mountains; the prominence of the tiger stance in
-    this form is an example of the "mountain" motif being represented in the
-    form's movements.
-  - Low double knifehand block (also called low augmented knifehand block)
-  - A palm block and a backfist strike, both performed on a supporting arm
-  - A scissors block (i.e., simultaneous low block and outside block)
-  - Shoulder-height opening block
-  - Strike to the abdomen using the knee
-  - A hinge-block chamber leading up to a low cross block. This is the first
-    block seen in the Taegeuk poomsae that is not a "deflecting" block. In other
-    words, this block traps an attack rather than deflecting it; this is an
-    example of an "unyielding/immovable" movement in this form.
-  - Target kick
+  - Tiger stance (Beom seogi)
+  - Palm heel inward block (Batangson an makki)
+  - Covered fist ready posture (Bojumeok jumbiseogi)
+  - Scissors block (Kawi makki)
+  - Knee strike (Mureup chigi)
+  - Double uppercut (Du jumeok jecheo jireugi)
+  - Cross stance (Kkoa seogi)
+  - Low cross block (Eotgeoreo arae makki)
+  - Backfist outward strike (Deungjumeok bakkat chigi)
+  - Target crescent kick (Pyojeok chagi)
+  - Horse stance (Juchum seogi)
+  - Side elbow strike (Palgup yeop chigi)
+  - Single knifehand side block (Hansonnal yeop makki)
 movements:
-  - step: "1"
-    direction: null
-    stance: null
-    technique: This form begins with a tiger stance. In Korean culture, tigers are
-      associated with life in the mountains; the prominence of the tiger stance
-      in this form is an example of the "mountain" motif being represented in
-      the form's movements.
+  - step: 1
+    direction: Turn left 90°
+    stance: Left tiger stance (Beom seogi)
+    technique: Right palm heel inward block (Batangson an makki)
+    notes: "Left foot is forward. Right palm blocks inward across the body."
+  - step: 2
+    direction: Right front snap kick (Ap chagi), retract foot back
+    stance: Left tiger stance (Beom seogi)
+    technique: Left inside middle block (Momtong an makki)
+    notes: "After kicking, the right foot returns to its starting position."
+  - step: 3
+    direction: Turn right 180°
+    stance: Right tiger stance (Beom seogi)
+    technique: Left palm heel inward block (Batangson an makki)
+    notes: "Right foot is forward. Left palm blocks inward across the body."
+  - step: 4
+    direction: Left front snap kick (Ap chagi), retract foot back
+    stance: Right tiger stance (Beom seogi)
+    technique: Right inside middle block (Momtong an makki)
+    notes: "After kicking, the left foot returns to its starting position."
+  - step: 5
+    direction: Turn left 90° (toward front)
+    stance: Left back stance (Dwit kubi)
+    technique: Double knifehand low block (Sonnal arae makki)
     notes: null
-  - step: "2"
-    direction: null
-    stance: null
-    technique: Low double knifehand block (also called low augmented knifehand block)
+  - step: 6
+    direction: Step forward
+    stance: Right back stance (Dwit kubi)
+    technique: Double knifehand low block (Sonnal arae makki)
     notes: null
-  - step: "3"
-    direction: null
-    stance: null
-    technique: A palm block and a backfist strike, both performed on a supporting arm
+  - step: 7
+    direction: Turn left 90°
+    stance: Left tiger stance (Beom seogi)
+    technique: Right palm heel inward block (Batangson an makki), then right backfist outward strike (Deungjumeok bakkat chigi)
+    notes: "Left foot is forward. The left fist supports under the right elbow during the block, then remains there during the strike."
+  - step: 8
+    direction: Turn right 180°
+    stance: Right tiger stance (Beom seogi)
+    technique: Left palm heel inward block (Batangson an makki), then left backfist outward strike (Deungjumeok bakkat chigi)
+    notes: "Right foot is forward. The right fist supports under the left elbow during the block, then remains there during the strike."
+  - step: 9
+    direction: Turn left 90° (toward front)
+    stance: Closed stance (Moa seogi)
+    technique: Covered fist ready posture (Bojumeok)
+    notes: "Left foot pulls to the right foot. Right fist is covered by the left hand at chin/chest height. Executed slowly over 5 seconds."
+  - step: 10
+    direction: Step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left scissors block (Kawi makki)
+    notes: "Simultaneous left low block and right inside middle block."
+  - step: 11
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right scissors block (Kawi makki)
+    notes: "Simultaneous right low block and left inside middle block."
+  - step: 12
+    direction: Turn left 270°
+    stance: Left front stance (Ap kubi)
+    technique: Double outside block / Middle opening block (Momtong hecheo makki)
+    notes: "Pivot counter-clockwise on the right foot."
+  - step: 13
+    direction: Grab and pull down (in place)
+    stance: Left front stance (Ap kubi)
+    technique: Right knee strike (Mureup chigi)
+    notes: "Both hands reach up (grabbing opponent's head/shoulders) and pull down into the rising right knee."
+  - step: 14
+    direction: Hop forward, land on right foot with left foot behind
+    stance: Right cross stance (Kkoa seogi)
+    technique: Double uppercut (Du jumeok jecheo jireugi)
+    notes: "Execute immediately after the knee strike."
+  - step: 15
+    direction: Step left foot back
+    stance: Right front stance (Ap kubi)
+    technique: Low cross block (Eotgeoreo arae makki)
+    notes: "Right arm is on the bottom (matching the forward leg)."
+  - step: 16
+    direction: Turn right 180°
+    stance: Right front stance (Ap kubi)
+    technique: Double outside block / Middle opening block (Momtong hecheo makki)
     notes: null
-  - step: "4"
-    direction: null
-    stance: null
-    technique: A scissors block (i.e., simultaneous low block and outside block)
-    notes: null
-  - step: "5"
-    direction: null
-    stance: null
-    technique: Shoulder-height opening block
-    notes: null
-  - step: "6"
-    direction: null
-    stance: null
-    technique: Strike to the abdomen using the knee
-    notes: null
-  - step: "7"
-    direction: null
-    stance: null
-    technique: A hinge-block chamber leading up to a low cross block. This is the
-      first block seen in the Taegeuk poomsae that is not a "deflecting" block.
-      In other words, this block traps an attack rather than deflecting it; this
-      is an example of an "unyielding/immovable" movement in this form.
-    notes: null
-  - step: "8"
-    direction: null
-    stance: null
-    technique: Target kick
-    notes: null
+  - step: 17
+    direction: Grab and pull down (in place)
+    stance: Right front stance (Ap kubi)
+    technique: Left knee strike (Mureup chigi)
+    notes: "Both hands reach up and pull down into the rising left knee."
+  - step: 18
+    direction: Hop forward, land on left foot with right foot behind
+    stance: Left cross stance (Kkoa seogi)
+    technique: Double uppercut (Du jumeok jecheo jireugi)
+    notes: "Execute immediately after the knee strike."
+  - step: 19
+    direction: Step right foot back
+    stance: Left front stance (Ap kubi)
+    technique: Low cross block (Eotgeoreo arae makki)
+    notes: "Left arm is on the bottom (matching the forward leg)."
+  - step: 20
+    direction: Turn left 90° (toward back)
+    stance: Left walking stance (Ap seogi)
+    technique: Left backfist outward strike (Deungjumeok bakkat chigi)
+    notes: "Strike to the temple level."
+  - step: 21
+    direction: Right crescent target kick (Pyojeok chagi)
+    stance: None (in motion)
+    technique: Right crescent target kick
+    notes: "Kick strikes the open left palm."
+  - step: 22
+    direction: Land forward
+    stance: Horse stance (Juchum seogi)
+    technique: Right side elbow strike (Palgup yeop chigi)
+    notes: "Right elbow strikes into the open left palm."
+  - step: 23
+    direction: Step forward (sliding right foot up, then stepping left foot out)
+    stance: Right walking stance (Ap seogi)
+    technique: Right backfist outward strike (Deungjumeok bakkat chigi)
+    notes: "Strike to the temple level."
+  - step: 24
+    direction: Left crescent target kick (Pyojeok chagi)
+    stance: None (in motion)
+    technique: Left crescent target kick
+    notes: "Kick strikes the open right palm."
+  - step: 25
+    direction: Land forward
+    stance: Horse stance (Juchum seogi)
+    technique: Left side elbow strike (Palgup yeop chigi), then left single knifehand side block (Hansonnal yeop makki)
+    notes: "Left elbow strikes into the open right palm, followed immediately by a left knifehand block from the same stance. Execute Kihap (yell) on the knifehand block. Hold stance until 'Baro' command."
 sources:
-  - title: "Wikipedia: Taegeuk Chil Jang"
-    url: https://en.wikipedia.org/wiki/Taegeuk_Chil_Jang
-    license: CC BY-SA 3.0
-notes: Draft dataset bootstrapped from Wikipedia article content.
+  - title: "Kukkiwon Standard Poomsae"
+    url: "https://www.kukkiwon.or.kr"
+    license: "Standard"
+notes: "Dataset aligned to Kukkiwon 25-step standard. Korean terminology added for data enrichment."

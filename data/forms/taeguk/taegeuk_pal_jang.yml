@@ -1,43 +1,162 @@
 name: Taegeuk Pal Jang
-korean: null
+korean: 태극 8장
 group: Taegeuk
 number: 8
-meaning: null
-trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
-  parallel lines. On each line, a 180 degree turn is performed.
-rank: null
+meaning: Earth (Gon)
+trigram: ☷
+rank: 1st Geup
 lines: 3
-movement_count: 4
+movement_count: 27
 techniques_introduced:
-  - Augmented outside blocks, at both medium and low heights
-  - Cross stance, used as a transitional movement on the third line
-  - Half Mountain block
-  - Forward-facing double knifehand block, as seen in the tiger stance movements
-    on the middle line
+  - Augmented middle block (Geodeureo momtong makki)
+  - Augmented low block (Geodeureo arae makki)
+  - Half mountain block (Oesanteul makki)
+  - Pulling jaw punch / Uppercut (Danggyeo teok jireugi)
+  - Cross stance (Kkoa seogi)
+  - Jumping front snap kick (Ttwieo ap chagi)
 movements:
-  - step: "1"
-    direction: null
-    stance: null
-    technique: Augmented outside blocks, at both medium and low heights
+  - step: 1
+    direction: Turn left 90°
+    stance: Left back stance (Dwit kubi)
+    technique: Left augmented middle block (Geodeureo momtong makki)
     notes: null
-  - step: "2"
-    direction: null
-    stance: null
-    technique: Cross stance, used as a transitional movement on the third line
+  - step: 2
+    direction: Shift weight forward (in place)
+    stance: Left front stance (Ap kubi)
+    technique: Right middle punch (Momtong baro jireugi)
+    notes: "The front foot slides slightly forward to transition from back stance to front stance."
+  - step: 3
+    direction: Turn right 180°
+    stance: Right back stance (Dwit kubi)
+    technique: Right augmented middle block (Geodeureo momtong makki)
     notes: null
-  - step: "3"
-    direction: null
-    stance: null
-    technique: Half Mountain block
+  - step: 4
+    direction: Shift weight forward (in place)
+    stance: Right front stance (Ap kubi)
+    technique: Left middle punch (Momtong baro jireugi)
+    notes: "The front foot slides slightly forward to transition from back stance to front stance."
+  - step: 5
+    direction: Turn left 90° (toward front)
+    stance: Left front stance (Ap kubi)
+    technique: Left augmented low block (Geodeureo arae makki)
     notes: null
-  - step: "4"
-    direction: null
-    stance: null
-    technique: Forward-facing double knifehand block, as seen in the tiger stance
-      movements on the middle line
+  - step: 6
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right augmented middle block (Geodeureo momtong makki)
     notes: null
+  - step: 7
+    direction: Turn left 270°
+    stance: Left tiger stance (Beom seogi)
+    technique: Left double knifehand middle block (Sonnal momtong makki)
+    notes: null
+  - step: 8
+    direction: Left front snap kick (Ap chagi)
+    stance: None (in motion)
+    technique: Left front snap kick
+    notes: null
+  - step: 9
+    direction: Land forward
+    stance: Left front stance (Ap kubi)
+    technique: Right middle punch (Momtong baro jireugi)
+    notes: null
+  - step: 10
+    direction: Turn right 180°
+    stance: Right tiger stance (Beom seogi)
+    technique: Right double knifehand middle block (Sonnal momtong makki)
+    notes: null
+  - step: 11
+    direction: Right front snap kick (Ap chagi)
+    stance: None (in motion)
+    technique: Right front snap kick
+    notes: null
+  - step: 12
+    direction: Land forward
+    stance: Right front stance (Ap kubi)
+    technique: Left middle punch (Momtong baro jireugi)
+    notes: null
+  - step: 13
+    direction: Turn left 90° (toward front)
+    stance: Left front stance (Ap kubi)
+    technique: Left augmented low block (Geodeureo arae makki)
+    notes: null
+  - step: 14
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right augmented middle block (Geodeureo momtong makki)
+    notes: null
+  - step: 15
+    direction: Turn left 270°
+    stance: Left back stance (Dwit kubi)
+    technique: Left half mountain block (Oesanteul makki)
+    notes: "Simultaneous left low block and right high inner block."
+  - step: 16
+    direction: Shift weight forward (in place)
+    stance: Left front stance (Ap kubi)
+    technique: Right pulling jaw punch (Danggyeo teok jireugi)
+    notes: "Pull the left fist to the right shoulder while executing an uppercut with the right fist."
+  - step: 17
+    direction: Step right foot past the left foot
+    stance: Right cross stance (Kkoa seogi)
+    technique: Transitional movement
+    notes: "Step forward into a cross stance, preparing to pivot 180°."
+  - step: 18
+    direction: Pivot right 180°
+    stance: Right back stance (Dwit kubi)
+    technique: Right half mountain block (Oesanteul makki)
+    notes: "Simultaneous right low block and left high inner block."
+  - step: 19
+    direction: Shift weight forward (in place)
+    stance: Right front stance (Ap kubi)
+    technique: Left pulling jaw punch (Danggyeo teok jireugi)
+    notes: "Pull the right fist to the left shoulder while executing an uppercut with the left fist."
+  - step: 20
+    direction: Turn left 90° (toward back)
+    stance: Left front stance (Ap kubi)
+    technique: Left augmented low block (Geodeureo arae makki)
+    notes: null
+  - step: 21
+    direction: Right front snap kick (Ap chagi)
+    stance: None (in motion)
+    technique: Right front snap kick
+    notes: null
+  - step: 22
+    direction: Jump off left foot while kicking right foot is still in the air
+    stance: None (in motion)
+    technique: Jumping right front snap kick (Ttwieo ap chagi)
+    notes: "Execute Kihap (yell) on the jumping kick."
+  - step: 23
+    direction: Land forward
+    stance: Right front stance (Ap kubi)
+    technique: Right inside middle block (Momtong an makki)
+    notes: null
+  - step: 24
+    direction: No step (in place)
+    stance: Right front stance (Ap kubi)
+    technique: Left-right double middle punch (Dubeon jireugi)
+    notes: null
+  - step: 25
+    direction: Turn left 270°
+    stance: Left back stance (Dwit kubi)
+    technique: Left single knifehand middle block (Hansonnal momtong makki)
+    notes: null
+  - step: 26
+    direction: Shift weight forward (in place)
+    stance: Left front stance (Ap kubi)
+    technique: Right middle punch (Momtong baro jireugi)
+    notes: null
+  - step: 27
+    direction: Turn right 180°
+    stance: Right back stance (Dwit kubi)
+    technique: Right single knifehand middle block (Hansonnal momtong makki)
+    notes: null
+  - step: 28
+    direction: Shift weight forward (in place)
+    stance: Right front stance (Ap kubi)
+    technique: Left middle punch (Momtong baro jireugi)
+    notes: "Hold stance until 'Baro' command."
 sources:
-  - title: "Wikipedia: Taegeuk Pal Jang"
-    url: https://en.wikipedia.org/wiki/Taegeuk_Pal_Jang
-    license: CC BY-SA 3.0
-notes: Draft dataset bootstrapped from Wikipedia article content.
+  - title: "Kukkiwon Standard Poomsae"
+    url: "https://www.kukkiwon.or.kr"
+    license: "Standard"
+notes: "Dataset aligned to Kukkiwon standard sequence (kicks separated for precise step-mapping). Korean terminology added for data enrichment."

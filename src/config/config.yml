@@ -35,10 +35,10 @@ forms:
         enabled: true
       - name: Taegeuk Chil Jang
         file: data/forms/taeguk/taegeuk_chil_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Pal Jang
         file: data/forms/taeguk/taegeuk_pal_jang.yml
-        enabled: false
+        enabled: true
   - palgwe:
       - name: Palgwe Il Jang
         file: data/forms/palgwe/palgwe_il_jang.yml
