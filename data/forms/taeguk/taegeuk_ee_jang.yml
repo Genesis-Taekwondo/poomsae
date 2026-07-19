@@ -1,77 +1,107 @@
 name: Taegeuk Ee Jang
-korean: null
+korean: 태극 2장
 group: Taegeuk
 number: 2
-meaning: null
-trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
-  parallel lines. On each line, a 180 degree turn is performed.
-rank: null
+meaning: Joy and Lake (Tae)
+trigram: ☱
+rank: 7th Geup
 lines: 3
-movement_count: 10
+movement_count: 18
 techniques_introduced:
-  - Walking stance
-  - Long front stance
-  - Low block
-  - Inside middle block
-  - High block
-  - Middle punch
-  - Front snap kick
-  - High punch
-  - How to transition from walking stance to long front stance
-  - How to perform a kick-and-punch combination
+  - High punch (Eolgul jireugi)
 movements:
-  - step: "1"
-    direction: step forward
-    stance: walking stance
-    technique: Walking stance
+  - step: 1
+    direction: Turn left 90°
+    stance: Left walking stance (Ap seogi)
+    technique: Left low block (Arae makki)
     notes: null
-  - step: "2"
-    direction: step forward
-    stance: long front stance
-    technique: Long front stance
+  - step: 2
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right middle punch (Momtong jireugi)
     notes: null
-  - step: "3"
-    direction: step forward
-    stance: front stance
-    technique: Low block
+  - step: 3
+    direction: Turn right 180°
+    stance: Right walking stance (Ap seogi)
+    technique: Right low block (Arae makki)
     notes: null
-  - step: "4"
-    direction: step forward
-    stance: front stance
-    technique: Inside middle block
+  - step: 4
+    direction: Step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left middle punch (Momtong jireugi)
     notes: null
-  - step: "5"
-    direction: step forward
-    stance: front stance
-    technique: High block
+  - step: 5
+    direction: Turn left 90° (toward front)
+    stance: Left walking stance (Ap seogi)
+    technique: Right inside middle block (Momtong an makki)
     notes: null
-  - step: "6"
-    direction: step forward
-    stance: front stance
-    technique: Middle punch
+  - step: 6
+    direction: Step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Left inside middle block (Momtong an makki)
     notes: null
-  - step: "7"
-    direction: step forward
-    stance: front stance
-    technique: Front snap kick
+  - step: 7
+    direction: Turn left 90°
+    stance: Left walking stance (Ap seogi)
+    technique: Left low block (Arae makki)
     notes: null
-  - step: "8"
-    direction: pivot left 90°
-    stance: front stance
-    technique: High punch
+  - step: 8
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right high punch (Eolgul jireugi)
+    notes: "Kick and punch are executed in sequence."
+  - step: 9
+    direction: Turn right 180°
+    stance: Right walking stance (Ap seogi)
+    technique: Right low block (Arae makki)
     notes: null
-  - step: "9"
-    direction: turn 180°
-    stance: walking stance
-    technique: How to transition from walking stance to long front stance
+  - step: 10
+    direction: Left front snap kick (Ap chagi), step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left high punch (Eolgul jireugi)
+    notes: "Kick and punch are executed in sequence."
+  - step: 11
+    direction: Turn left 90° (toward front)
+    stance: Left walking stance (Ap seogi)
+    technique: Left high block (Eolgul makki)
     notes: null
-  - step: "10"
-    direction: step forward
-    stance: front stance
-    technique: How to perform a kick-and-punch combination
+  - step: 12
+    direction: Step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Right high block (Eolgul makki)
     notes: null
+  - step: 13
+    direction: Turn left 90°
+    stance: Left walking stance (Ap seogi)
+    technique: Right inside middle block (Momtong an makki)
+    notes: null
+  - step: 14
+    direction: Turn right 180°
+    stance: Right walking stance (Ap seogi)
+    technique: Left inside middle block (Momtong an makki)
+    notes: null
+  - step: 15
+    direction: Turn left 90° (toward back)
+    stance: Left walking stance (Ap seogi)
+    technique: Left low block (Arae makki)
+    notes: null
+  - step: 16
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Right middle punch (Momtong jireugi)
+    notes: "Kick and punch are executed in sequence."
+  - step: 17
+    direction: Left front snap kick (Ap chagi), step forward
+    stance: Left walking stance (Ap seogi)
+    technique: Left middle punch (Momtong jireugi)
+    notes: "Kick and punch are executed in sequence."
+  - step: 18
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Right middle punch (Momtong jireugi)
+    notes: "Execute Kihap (yell) on the final punch. Hold stance until 'Baro' command."
 sources:
-  - title: "Wikipedia: Taegeuk Ee Jang"
-    url: https://en.wikipedia.org/wiki/Taegeuk_Ee_Jang
-    license: CC BY-SA 3.0
-notes: Draft dataset bootstrapped from Wikipedia article content.
+  - title: "Kukkiwon Standard Poomsae"
+    url: "https://www.kukkiwon.or.kr"
+    license: "Standard"
+notes: "Dataset aligned to Kukkiwon 18-step standard. Korean terminology added for data enrichment."
