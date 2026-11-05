@@ -25,9 +25,16 @@ describe('App', function () {
     assert.ok(res.text.includes('/form-selection'));
   });
 
+  it('GET /styles.css serves a static asset', async function () {
+    const res = await request(app).get('/styles.css');
+    assert.strictEqual(res.status, 200);
+  });
+
   it('GET /form-selection responds with 200 and contains a Go Back button', async function () {
     const res = await request(app).get('/form-selection');
     assert.strictEqual(res.status, 200);
     assert.ok(res.text.includes('Go Back'));
+    assert.ok(res.text.includes('Taegeuk Il Jang'));
+    assert.ok(!res.text.includes('{{formGroups}}'));
   });
 });
