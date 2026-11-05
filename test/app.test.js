@@ -30,11 +30,29 @@ describe('App', function () {
     assert.strictEqual(res.status, 200);
   });
 
-  it('GET /form-selection responds with 200 and contains a Go Back button', async function () {
+  it('GET /taeguk-hover.css serves Taeguk hover styles', async function () {
+    const res = await request(app).get('/taeguk-hover.css');
+    assert.strictEqual(res.status, 200);
+    assert.ok(res.text.includes('.taeguk-hover-pal-jang'));
+    assert.ok(res.text.includes('rgb(78 52 46 / 50%)'));
+  });
+
+  it('GET /form-selection responds with 200 and contains a Back Home button', async function () {
     const res = await request(app).get('/form-selection');
     assert.strictEqual(res.status, 200);
-    assert.ok(res.text.includes('Go Back'));
+    assert.ok(res.text.includes('Back Home'));
     assert.ok(res.text.includes('Taegeuk Il Jang'));
+    assert.ok(res.text.includes('rounded-lg border border-slate-800 bg-slate-950'));
     assert.ok(!res.text.includes('{{formGroups}}'));
+    [
+      'taeguk-hover-il-jang',
+      'taeguk-hover-ee-jang',
+      'taeguk-hover-sam-jang',
+      'taeguk-hover-sa-jang',
+      'taeguk-hover-oh-jang',
+      'taeguk-hover-yook-jang',
+      'taeguk-hover-chil-jang',
+      'taeguk-hover-pal-jang',
+    ].forEach(hoverClass => assert.ok(res.text.includes(hoverClass)));
   });
 });
