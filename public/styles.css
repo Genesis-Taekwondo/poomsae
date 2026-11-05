@@ -582,8 +582,20 @@ video {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .relative {
   position: relative;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.left-4 {
+  left: 1rem;
 }
 
 .z-10 {
@@ -675,6 +687,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -689,6 +705,10 @@ video {
 
 .gap-2\.5 {
   gap: 0.625rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -966,6 +986,11 @@ body {
   background-color: rgb(51 65 85 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-slate-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-slate-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
@@ -1020,6 +1045,14 @@ body {
 }
 
 @media (min-width: 640px) {
+  .sm\:bottom-6 {
+    bottom: 1.5rem;
+  }
+
+  .sm\:left-6 {
+    left: 1.5rem;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

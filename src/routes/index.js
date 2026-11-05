@@ -10,4 +10,5 @@ module.exports = app => {
   });
 
   require('./form-selection')(app);
+  require('./form-player')(app);
 };

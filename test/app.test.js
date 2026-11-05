@@ -42,6 +42,7 @@ describe('App', function () {
     assert.strictEqual(res.status, 200);
     assert.ok(res.text.includes('Back Home'));
     assert.ok(res.text.includes('Taegeuk Il Jang'));
+    assert.ok(res.text.includes('/form-player?form=data%2Fforms%2Ftaeguk%2Ftaegeuk_il_jang.yml'));
     assert.ok(res.text.includes('rounded-lg border border-slate-800 bg-slate-950'));
     assert.ok(!res.text.includes('{{formGroups}}'));
     [
@@ -54,5 +55,27 @@ describe('App', function () {
       'taeguk-hover-chil-jang',
       'taeguk-hover-pal-jang',
     ].forEach(hoverClass => assert.ok(res.text.includes(hoverClass)));
+  });
+
+  it('GET /form-player loads an enabled form and responds with the blank player view', async function () {
+    const res = await request(app)
+      .get('/form-player')
+      .query({ form: 'data/forms/taeguk/taegeuk_chil_jang.yml' });
+
+    assert.strictEqual(res.status, 200);
+    assert.ok(res.text.includes('<title>Form Player</title>'));
+    assert.ok(res.text.includes('<main class="min-h-screen" data-form-name="Taegeuk Chil Jang">'));
+    assert.ok(res.text.includes('href="/"'));
+    assert.ok(res.text.includes('Go Home'));
+    assert.ok(res.text.includes('href="/form-selection"'));
+    assert.ok(res.text.includes('Back to Selection'));
+  });
+
+  it('GET /form-player rejects a form file that is not enabled in config', async function () {
+    const res = await request(app)
+      .get('/form-player')
+      .query({ form: '../../package.json' });
+
+    assert.strictEqual(res.status, 404);
   });
 });

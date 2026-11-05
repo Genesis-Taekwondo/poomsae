@@ -72,8 +72,10 @@ module.exports = app => {
     const hoverBackgroundClass = hoverClass ? '' : 'hover:bg-slate-700';
 
     return `
-            <li class="rounded-md border border-slate-700 bg-slate-800 px-4 py-3 text-sm font-medium text-slate-100 shadow-sm transition-colors hover:border-teal-700 ${hoverEffectClass} ${hoverClass} ${hoverBackgroundClass} sm:text-base">
+            <li>
+              <a href="/form-player?form=${encodeURIComponent(entry.file)}" class="block rounded-md border border-slate-700 bg-slate-800 px-4 py-3 text-sm font-medium text-slate-100 shadow-sm transition-colors hover:border-teal-700 ${hoverEffectClass} ${hoverClass} ${hoverBackgroundClass} focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 sm:text-base">
               <span class="relative z-10">${escapeHtml(entry.name)}</span>
+              </a>
             </li>
           `;
   }).join('')}
