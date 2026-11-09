@@ -57,18 +57,25 @@ describe('App', function () {
     ].forEach(hoverClass => assert.ok(res.text.includes(hoverClass)));
   });
 
-  it('GET /form-player loads an enabled form and responds with the blank player view', async function () {
+  it('GET /form-player renders form metadata and movement controls', async function () {
     const res = await request(app)
       .get('/form-player')
-      .query({ form: 'data/forms/taeguk/taegeuk_chil_jang.yml' });
+      .query({ form: 'data/forms/taeguk/taegeuk_ee_jang.yml' });
 
     assert.strictEqual(res.status, 200);
     assert.ok(res.text.includes('<title>Form Player</title>'));
-    assert.ok(res.text.includes('<main class="min-h-screen" data-form-name="Taegeuk Chil Jang">'));
-    assert.ok(res.text.includes('href="/"'));
-    assert.ok(res.text.includes('Go Home'));
+    assert.ok(res.text.includes('data-form-name="Taegeuk Ee Jang"'));
+    assert.ok(res.text.includes('Taegeuk Ee Jang'));
+    assert.ok(res.text.includes('태극 2장'));
+    assert.ok(res.text.includes('Joy and Lake (Tae)'));
+    assert.ok(res.text.includes('7th Geup'));
+    assert.ok(res.text.includes('18 steps'));
+    assert.ok(res.text.includes('data-step="18"'));
+    assert.ok(res.text.includes('Execute Kihap'));
+    assert.ok(res.text.includes('id="play-toggle"'));
+    assert.ok(res.text.includes('id="step-progress"'));
     assert.ok(res.text.includes('href="/form-selection"'));
-    assert.ok(res.text.includes('Back to Selection'));
+    assert.ok(!res.text.includes('{{movements}}'));
   });
 
   it('GET /form-player rejects a form file that is not enabled in config', async function () {

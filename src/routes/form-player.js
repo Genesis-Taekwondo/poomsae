@@ -16,6 +16,28 @@ const escapeHtml = value => String(value)
   .replace(/"/g, '&quot;')
   .replace(/'/g, '&#39;');
 
+const renderMovements = movements => movements.map((movement, index) => `
+  <li>
+    <button
+      type="button"
+      class="step-item w-full border-l-2 border-transparent px-4 py-4 text-left text-white/40 transition-all duration-300 ease-in-out hover:text-white/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
+      data-index="${index}"
+      data-step="${escapeHtml(movement.step)}"
+      data-direction="${escapeHtml(movement.direction)}"
+      data-stance="${escapeHtml(movement.stance)}"
+      data-technique="${escapeHtml(movement.technique)}"
+      data-notes="${escapeHtml(movement.notes || '')}"
+      aria-pressed="false"
+    >
+      <span class="flex items-start justify-between gap-3">
+        <span class="min-w-0 flex-1 text-sm font-normal text-white/50">${escapeHtml(movement.direction)}</span>
+        <span class="shrink-0 text-right text-xs font-medium uppercase tracking-wide text-white/40">Step ${escapeHtml(movement.step)}</span>
+      </span>
+      <span class="mt-1 block text-lg font-bold">${escapeHtml(movement.technique)}</span>
+    </button>
+  </li>
+`).join('');
+
 const findEnabledForm = file => {
   const formGroups = Array.isArray(config.forms) ? config.forms : [];
 
@@ -44,12 +66,24 @@ module.exports = app => {
       return;
     }
 
-    res.locals.selectedFormConfig = YAML.parse(
+    const form = YAML.parse(
       fs.readFileSync(path.join(projectRoot, selectedForm.file), 'utf8')
     );
-    res.send(formPlayerTemplate.replace(
-      '{{formName}}',
-      escapeHtml(res.locals.selectedFormConfig.name)
+    res.locals.selectedFormConfig = form;
+
+    const substitutions = {
+      formName: escapeHtml(form.name),
+      formKorean: escapeHtml(form.korean || ''),
+      formMeaning: escapeHtml(form.meaning || ''),
+      formTrigram: escapeHtml(form.trigram || ''),
+      formRank: escapeHtml(form.rank || ''),
+      movementCount: escapeHtml(form.movement_count || form.movements.length),
+      techniquesIntroduced: escapeHtml((form.techniques_introduced || []).join(', ')),
+      movements: renderMovements(form.movements || []),
+    };
+
+    res.send(formPlayerTemplate.replace(/{{(\w+)}}/g, (placeholder, key) =>
+      substitutions[key] || ''
     ));
   });
 };
