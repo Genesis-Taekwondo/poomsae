@@ -72,6 +72,16 @@ describe('App', function () {
     assert.ok(res.text.includes('18 steps'));
     assert.ok(res.text.includes('data-step="18"'));
     assert.ok(res.text.includes('Execute Kihap'));
+    assert.ok(res.text.includes('aria-label="Home"'));
+    assert.strictEqual((res.text.match(/h-11 w-11 items-center justify-center rounded-full border border-white\/25/g) || []).length, 4);
+    assert.ok(res.text.includes('<span class="mr-3 text-3xl text-white/80" aria-label="Trigram ☱">☱</span>Taegeuk Ee Jang'));
+    assert.strictEqual((res.text.match(/mx-4 h-3\.5 shrink-0 border-l border-white\/25/g) || []).length, 2);
+    assert.strictEqual((res.text.match(/width="24" height="24"/g) || []).length, 2);
+    assert.ok(res.text.includes('class="step-list-scroll min-h-0 flex-1 overflow-y-auto px-0 py-3"'));
+    assert.ok(res.text.includes('class="step-item w-full'));
+    assert.ok(!res.text.includes('>Poomsae</span>'));
+    assert.ok(!res.text.includes('<span>Previous</span>'));
+    assert.ok(!res.text.includes('<span>Next</span>'));
     assert.ok(res.text.includes('id="play-toggle"'));
     assert.ok(res.text.includes('id="step-progress"'));
     assert.ok(res.text.includes('href="/form-selection"'));
