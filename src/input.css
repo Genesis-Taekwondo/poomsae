@@ -48,4 +48,11 @@ body {
     border-radius: 9999px;
     background-color: rgb(255 255 255 / 20%);
   }
+
+  .notes-content {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }

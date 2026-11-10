@@ -68,23 +68,51 @@ describe('App', function () {
     assert.ok(res.text.includes('Taegeuk Ee Jang'));
     assert.ok(res.text.includes('태극 2장'));
     assert.ok(res.text.includes('Joy and Lake (Tae)'));
+    assert.ok(res.text.includes('aria-label="Trigram ☱">☱</span>'));
+    const formTitle = res.text.match(/<a href="\/form-selection"[^>]*>([\s\S]*?)<\/a>/);
+    assert.ok(formTitle);
+    assert.ok(!formTitle[1].includes('☱'));
+    assert.ok(res.text.includes('<nav class="flex items-center justify-between gap-3" aria-label="Player navigation">'));
+    assert.ok(!res.text.includes('<path d="M4 6h16M4 12h16M4 18h16" />'));
+    assert.ok(res.text.includes('aria-label="Back to form selection"'));
+    assert.ok(!res.text.includes('<h1 '));
+    const formDetails = res.text.slice(res.text.indexOf('aria-label="Form details"'));
+    assert.ok(formDetails.indexOf('7th Geup') < formDetails.indexOf('aria-label="Trigram ☱"'));
+    assert.ok(formDetails.indexOf('aria-label="Trigram ☱"') < formDetails.indexOf('Joy and Lake (Tae)'));
     assert.ok(res.text.includes('7th Geup'));
     assert.ok(res.text.includes('18 steps'));
     assert.ok(res.text.includes('data-step="18"'));
     assert.ok(res.text.includes('Execute Kihap'));
+    const stepOne = res.text.match(/<button[^>]*data-step="1"[\s\S]*?<\/button>/);
+    const stepEighteen = res.text.match(/<button[^>]*data-step="18"[\s\S]*?<\/button>/);
+    assert.ok(stepOne);
+    assert.ok(stepEighteen);
+    assert.ok(!stepOne[0].includes('aria-label="Kihap"'));
+    assert.ok(stepEighteen[0].includes('class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#448AFF] text-sm leading-5 text-[#448AFF]"'));
+    assert.ok(stepEighteen[0].includes('&#x1F5E3;&#xFE0E;'));
     assert.ok(res.text.includes('aria-label="Home"'));
-    assert.strictEqual((res.text.match(/h-11 w-11 items-center justify-center rounded-full border border-white\/25/g) || []).length, 4);
-    assert.ok(res.text.includes('<span class="mr-3 text-3xl text-white/80" aria-label="Trigram ☱">☱</span>Taegeuk Ee Jang'));
-    assert.strictEqual((res.text.match(/mx-4 h-3\.5 shrink-0 border-l border-white\/25/g) || []).length, 2);
-    assert.strictEqual((res.text.match(/width="24" height="24"/g) || []).length, 2);
+    assert.strictEqual((res.text.match(/h-11 w-11 items-center justify-center rounded-full border border-white\/25/g) || []).length, 3);
+    assert.strictEqual((res.text.match(/mx-4 h-3\.5 shrink-0 border-l border-white\/25/g) || []).length, 3);
+    assert.strictEqual((res.text.match(/width="24" height="24"/g) || []).length, 1);
     assert.ok(res.text.includes('class="step-list-scroll min-h-0 flex-1 overflow-y-auto px-0 py-3"'));
-    assert.ok(res.text.includes('class="step-item w-full'));
+    assert.ok(res.text.includes('class="step-item relative w-full'));
+    assert.ok(res.text.includes('<span class="mt-1 flex items-center justify-between gap-3">\n        <span class="min-w-0 flex-1 text-sm font-normal text-white/50">Left walking stance (Ap seogi)</span>'));
+    assert.ok(res.text.includes('class="h-20 shrink-0 overflow-hidden border-t border-white/10 px-5 py-2" aria-label="Step notes"'));
+    assert.ok(res.text.includes('<div id="notes-row" class="hidden">'));
+    assert.ok(res.text.includes('class="notes-content mt-1 text-sm text-white/90"'));
+    assert.ok(!res.text.includes('id="context-direction"'));
+    assert.ok(!res.text.includes('id="context-stance"'));
+    assert.ok(!res.text.includes('id="context-technique"'));
     assert.ok(!res.text.includes('>Poomsae</span>'));
     assert.ok(!res.text.includes('<span>Previous</span>'));
     assert.ok(!res.text.includes('<span>Next</span>'));
     assert.ok(res.text.includes('id="play-toggle"'));
     assert.ok(res.text.includes('id="step-progress"'));
     assert.ok(res.text.includes('href="/form-selection"'));
+    assert.deepStrictEqual(
+      Array.from(res.text.matchAll(/data-speed="([^"]+)"/g), match => match[1]),
+      ['0.1', '0.3', '0.5', '0.75', '1', '1.3', '1.5', '1.75', '2']
+    );
     assert.ok(!res.text.includes('{{movements}}'));
   });
 
