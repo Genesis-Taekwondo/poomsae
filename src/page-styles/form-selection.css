@@ -1,0 +1,120 @@
+.form-list-scroll {
+  scrollbar-color: #475569 transparent;
+  scrollbar-width: thin;
+}
+
+.form-list-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-list-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.form-list-scroll::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background-color: #475569;
+  background-clip: content-box;
+}
+
+.form-list-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #14b8a6;
+}
+
+.taeguk-form-hover {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.taeguk-form-hover::before {
+  background-image: linear-gradient(
+    90deg,
+    transparent 50%,
+    var(--taeguk-color-a) 75%,
+    var(--taeguk-color-b) 100%
+  );
+  content: '';
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 240ms ease;
+  z-index: 0;
+}
+
+.taeguk-form-hover:hover::before {
+  opacity: 1;
+}
+
+.taeguk-hover-il-jang {
+  --taeguk-color-a: rgb(234 179 8 / 50%);
+  --taeguk-color-b: rgb(249 115 22 / 50%);
+}
+
+.taeguk-hover-ee-jang {
+  --taeguk-color-a: rgb(34 197 94 / 50%);
+  --taeguk-color-b: rgb(59 130 246 / 50%);
+}
+
+.taeguk-hover-sam-jang {
+  --taeguk-color-a: rgb(168 85 247 / 50%);
+  --taeguk-color-b: rgb(168 85 247 / 50%);
+}
+
+.taeguk-hover-sa-jang {
+  --taeguk-color-a: rgb(168 85 247 / 50%);
+  --taeguk-color-b: rgb(0 0 0 / 50%);
+}
+
+.taeguk-hover-oh-jang {
+  --taeguk-color-a: rgb(78 52 46 / 50%);
+  --taeguk-color-b: rgb(78 52 46 / 50%);
+}
+
+.taeguk-hover-yook-jang {
+  --taeguk-color-a: rgb(78 52 46 / 50%);
+  --taeguk-color-b: rgb(0 0 0 / 50%);
+}
+
+.taeguk-hover-chil-jang {
+  --taeguk-color-a: rgb(168 85 247 / 50%);
+  --taeguk-color-b: rgb(0 0 0 / 50%);
+}
+
+.taeguk-hover-pike-jang {
+  --taeguk-color-a: rgb(213 0 0 / 50%);
+  --taeguk-color-b: rgb(213 0 0 / 50%);
+}
+
+.taeguk-hover-pal-jang {
+  --taeguk-color-a: rgb(213 0 0 / 50%);
+  --taeguk-color-b: rgb(0 0 0 / 50%);
+}
+
+@media (orientation: landscape), (min-width: 768px) {
+  #form-selection-main {
+    max-width: none;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  #form-selection-content {
+    max-width: 88rem;
+    padding: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  #form-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+    align-items: start;
+    gap: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .taeguk-form-hover::before {
+    transition: none;
+  }
+}

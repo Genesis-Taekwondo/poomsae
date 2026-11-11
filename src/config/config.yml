@@ -23,22 +23,22 @@ forms:
         enabled: true
       - name: Taegeuk Sam Jang
         file: data/forms/taeguk/taegeuk_sam_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Sa Jang
         file: data/forms/taeguk/taegeuk_sa_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Oh Jang
         file: data/forms/taeguk/taegeuk_oh_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Yook Jang
         file: data/forms/taeguk/taegeuk_yook_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Chil Jang
         file: data/forms/taeguk/taegeuk_chil_jang.yml
-        enabled: false
+        enabled: true
       - name: Taegeuk Pal Jang
         file: data/forms/taeguk/taegeuk_pal_jang.yml
-        enabled: false
+        enabled: true
   - palgwe:
       - name: Palgwe Il Jang
         file: data/forms/palgwe/palgwe_il_jang.yml

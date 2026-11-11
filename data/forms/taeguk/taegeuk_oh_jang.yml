@@ -1,43 +1,120 @@
 name: Taegeuk Oh Jang
-korean: null
+korean: 태극 5장
 group: Taegeuk
 number: 5
-meaning: null
-trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
-  parallel lines. On each line, a 180 degree turn is performed.
-rank: null
+meaning: Wind (Seon)
+trigram: ☴
+rank: 4th Geup
 lines: 3
-movement_count: 2
+movement_count: 20
 techniques_introduced:
-  - One focus of this form is the introduction of elbow strikes of various
-    types. Along the top line, chin-height elbow strikes are assisted by a
-    supporting hand. Along the middle line, the off-hand is used as a target for
-    elbow strikes at solar-plexus height.
-  - The side kicks along the middle line are augmented with a simultaneous hand
-    strike. Some schools teach that this strike is a punch, other schools teach
-    that this strike is a horizontal hammerfist, yet other schools teach that
-    the extended arm symbolizes grabbing the opponent and preparing to pull him
-    in to the elbow strike that follows next.
+  - Left/Right stance (Oen / Oreun seogi)
+  - Cross stance (Kkoa seogi)
+  - Hammerfist downward strike (Mejumeok naeryeo chigi)
+  - Elbow target strike (Palkup pyojeok chigi)
 movements:
-  - step: "1"
-    direction: null
-    stance: null
-    technique: One focus of this form is the introduction of elbow strikes of
-      various types. Along the top line, chin-height elbow strikes are assisted
-      by a supporting hand. Along the middle line, the off-hand is used as a
-      target for elbow strikes at solar-plexus height.
+  - step: 1
+    direction: Turn left 90°
+    stance: Left front stance (Ap kubi)
+    technique: Left low block (Arae makki)
     notes: null
-  - step: "2"
-    direction: null
-    stance: null
-    technique: The side kicks along the middle line are augmented with a
-      simultaneous hand strike. Some schools teach that this strike is a punch,
-      other schools teach that this strike is a horizontal hammerfist, yet other
-      schools teach that the extended arm symbolizes grabbing the opponent and
-      preparing to pull him in to the elbow strike that follows next.
+  - step: 2
+    direction: Pull left foot back slightly
+    stance: Left stance (Oen seogi)
+    technique: Left hammerfist downward strike (Mejumeok naeryeo chigi)
+    notes: "Stance transitions by pulling the front foot back so feet are parallel and close together."
+  - step: 3
+    direction: Turn right 180°
+    stance: Right front stance (Ap kubi)
+    technique: Right low block (Arae makki)
     notes: null
+  - step: 4
+    direction: Pull right foot back slightly
+    stance: Right stance (Oreun seogi)
+    technique: Right hammerfist downward strike (Mejumeok naeryeo chigi)
+    notes: "Stance transitions by pulling the front foot back so feet are parallel and close together."
+  - step: 5
+    direction: Turn left 90° (toward front)
+    stance: Left front stance (Ap kubi)
+    technique: Left inside middle block (Momtong an makki), then right inside middle block
+    notes: "Two consecutive blocks executed from the same stance."
+  - step: 6
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right backfist front strike (Deungjumeok ap chigi), then left inside middle block
+    notes: "Kick, strike, and block are executed sequentially."
+  - step: 7
+    direction: Left front snap kick (Ap chagi), step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left backfist front strike (Deungjumeok ap chigi), then right inside middle block
+    notes: "Kick, strike, and block are executed sequentially."
+  - step: 8
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right backfist front strike (Deungjumeok ap chigi)
+    notes: null
+  - step: 9
+    direction: Turn left 270°
+    stance: Left back stance (Dwit kubi)
+    technique: Left single knifehand block (Hansonnal makki)
+    notes: "Pivot counter-clockwise on the right foot."
+  - step: 10
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right elbow target strike (Palkup pyojeok chigi)
+    notes: "Right elbow strikes into the open left palm."
+  - step: 11
+    direction: Turn right 180°
+    stance: Right back stance (Dwit kubi)
+    technique: Right single knifehand block (Hansonnal makki)
+    notes: null
+  - step: 12
+    direction: Step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left elbow target strike (Palkup pyojeok chigi)
+    notes: "Left elbow strikes into the open right palm."
+  - step: 13
+    direction: Turn left 90° (toward back)
+    stance: Left front stance (Ap kubi)
+    technique: Left low block (Arae makki), then right inside middle block
+    notes: "Two consecutive blocks executed from the same stance."
+  - step: 14
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right low block (Arae makki), then left inside middle block
+    notes: "Kick and two consecutive blocks executed sequentially."
+  - step: 15
+    direction: Turn left 90°
+    stance: Left front stance (Ap kubi)
+    technique: Left high block (Eolgul makki)
+    notes: null
+  - step: 16
+    direction: Right side kick (Yeop chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Left elbow target strike (Palkup pyojeok chigi)
+    notes: "Execute the side kick with a simultaneous right hand extension/strike, then land and strike the left elbow into the open right palm."
+  - step: 17
+    direction: Turn right 180°
+    stance: Right front stance (Ap kubi)
+    technique: Right high block (Eolgul makki)
+    notes: null
+  - step: 18
+    direction: Left side kick (Yeop chagi), step forward
+    stance: Left front stance (Ap kubi)
+    technique: Right elbow target strike (Palkup pyojeok chigi)
+    notes: "Execute the side kick with a simultaneous left hand extension/strike, then land and strike the right elbow into the open left palm."
+  - step: 19
+    direction: Turn left 90° (toward back)
+    stance: Left front stance (Ap kubi)
+    technique: Left low block (Arae makki), then right inside middle block
+    notes: "Two consecutive blocks executed from the same stance."
+  - step: 20
+    direction: Right front snap kick (Ap chagi), leap forward
+    stance: Right cross stance (Oreun kkoa seogi)
+    technique: Right backfist front strike (Deungjumeok ap chigi)
+    notes: "Execute Kihap (yell) on the strike. Hold stance until 'Baro' command."
 sources:
-  - title: "Wikipedia: Taegeuk Oh Jang"
-    url: https://en.wikipedia.org/wiki/Taegeuk_Oh_Jang
-    license: CC BY-SA 3.0
-notes: Draft dataset bootstrapped from Wikipedia article content.
+  - title: "Kukkiwon Standard Poomsae"
+    url: "https://www.kukkiwon.or.kr"
+    license: "Standard"
+notes: "Dataset aligned to Kukkiwon 20-step standard. Korean terminology added for data enrichment."

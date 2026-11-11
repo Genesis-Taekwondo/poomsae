@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <meta name="theme-color" content="#111122" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="min-h-screen bg-[#111122] font-sans text-white">
+    <main id="settings-main" class="mx-auto flex h-[100dvh] min-h-[540px] w-full max-w-md flex-col overflow-hidden border-x border-white/10 bg-[#111122] shadow-2xl shadow-black/40">
+      <header class="settings-header flex shrink-0 items-center justify-between border-b border-white/15 bg-[#111122]/75 px-5 py-3 shadow-lg shadow-black/10 backdrop-blur-xl">
+        <h1 class="display-font shrink-0 text-2xl font-semibold leading-tight">Settings</h1>
+        <span id="saved-indicator" class="saved-indicator min-w-0 flex-1 px-2 text-center" aria-live="polite"></span>
+        <a href="{{playerUrl}}" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white/70 transition-colors hover:border-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Back to form player">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11a9 9 0 1 1 2.6 6.4" />
+            <path d="M3 4v7h7" />
+          </svg>
+        </a>
+      </header>
+
+      <section id="settings-content" class="min-h-0 flex-1 space-y-6 overflow-y-auto px-5 py-5" aria-label="Player settings">
+        <p id="settings-feedback" class="settings-feedback hidden text-sm text-rose-300" role="alert" aria-live="polite"></p>
+        <fieldset id="display-settings" class="space-y-3">
+          <legend class="mb-3 text-sm font-semibold uppercase tracking-wider text-white/60">Display</legend>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display Korean technique names" data-setting="include_korean_techniques" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display Korean technique names</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display Korean stance names" data-setting="display_korean_stance_names" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display Korean stance names</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display move technique" data-setting="display_move_technique" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display move technique</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display move direction" data-setting="display_move_direction" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display move direction</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display move stance" data-setting="display_move_stance" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display move stance</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display move notes" data-setting="display_move_notes" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display move notes</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display form details" data-setting="display_form_details" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display form details</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Display new moves introduced in form" data-setting="display_new_moves" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Display new moves introduced in form</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <div id="voice-settings" class="space-y-2 pb-2">
+          <label for="player-voice" class="flex items-center justify-between gap-3 text-sm font-semibold uppercase tracking-wider text-white/60">
+            <span>Voice</span>
+          </label>
+          <select id="player-voice" data-setting="voice" aria-describedby="voice-status" class="w-full rounded-lg border border-white/15 bg-[#1b1b2c] px-4 py-3 text-sm text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+          </select>
+          <p id="voice-status" class="min-h-4 text-xs text-white/50" aria-live="polite"></p>
+        </div>
+
+        <fieldset id="narration-settings" class="space-y-3">
+          <legend class="mb-3 text-sm font-semibold uppercase tracking-wider text-white/60">Narration</legend>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Read step number" data-setting="read_step_number" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Read step number</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Read move direction" data-setting="read_move_direction" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Read move direction</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Read move technique" data-setting="read_move_technique" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Read move technique</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Read move stance" data-setting="read_move_stance" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Read move stance</span>
+            </span>
+          </label>
+          <label class="flex items-center gap-6 py-2 text-sm text-white/90">
+            <input type="checkbox" class="sr-only" role="switch" aria-label="Read kihap (yell)" data-setting="read_kihap" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span class="min-w-0 flex-1">
+              <span class="block">Read kihap (yell)</span>
+            </span>
+          </label>
+        </fieldset>
+      </section>
+    </main>
+    <script id="player-settings-defaults" type="application/json">{{playerSettings}}</script>
+    <script src="/player-settings.js"></script>
+  </body>
+</html>

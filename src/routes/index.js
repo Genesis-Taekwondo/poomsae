@@ -1,5 +1,4 @@
 const path = require('path');
-const config = require('../config');
 
 module.exports = app => {
   app.get('/health', (req, res) => {
@@ -7,6 +6,10 @@ module.exports = app => {
   });
 
   app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', config.server.static_dir, 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
   });
+
+  require('./form-selection')(app);
+  require('./form-player')(app);
+  require('./settings')(app);
 };

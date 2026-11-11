@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+  --app-background: #111122;
+  --app-foreground: #fff;
+  --app-muted: rgb(255 255 255 / 45%);
+  --app-border: rgb(255 255 255 / 15%);
+  --app-accent: #448aff;
+  --app-success: #22c55e;
+}
+
 body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  min-width: 320px;
+  background-color: var(--app-background);
+  color: var(--app-foreground);
+  font-family: 'Noto Sans', 'Segoe UI', sans-serif;
+}
+
+.display-font {
+  font-family: 'Protest Revolution', 'Noto Sans', sans-serif;
 }

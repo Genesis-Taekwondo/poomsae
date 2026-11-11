@@ -1,0 +1,169 @@
+.step-list-scroll {
+  scrollbar-color: rgb(255 255 255 / 20%) transparent;
+  scrollbar-width: thin;
+}
+
+.step-list-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.step-list-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.step-list-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: rgb(255 255 255 / 20%);
+}
+
+.notes-content {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.step-duration-indicator.step-duration-complete {
+  background-color: var(--app-success);
+}
+
+#volume-control {
+  appearance: none;
+  background: transparent;
+}
+
+#volume-control::-moz-range-track {
+  height: 3px;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 35%);
+}
+
+#volume-control::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 35%);
+}
+
+#volume-control::-webkit-slider-thumb {
+  width: 8px;
+  height: 8px;
+  margin-top: -2.5px;
+  appearance: none;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+#volume-control::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+#volume-control.is-muted::-moz-range-thumb {
+  border-radius: 0;
+  background:
+    linear-gradient(45deg, transparent 43%, #fff 43%, #fff 57%, transparent 57%),
+    linear-gradient(-45deg, transparent 43%, #fff 43%, #fff 57%, transparent 57%);
+}
+
+#volume-control.is-muted::-webkit-slider-thumb {
+  border-radius: 0;
+  background:
+    linear-gradient(45deg, transparent 43%, #fff 43%, #fff 57%, transparent 57%),
+    linear-gradient(-45deg, transparent 43%, #fff 43%, #fff 57%, transparent 57%);
+}
+
+#volume-control:focus-visible {
+  border-radius: 9999px;
+  outline: 2px solid #6ee7b7;
+  outline-offset: 4px;
+}
+
+@media (orientation: landscape), (min-width: 768px) {
+  main[data-form-name] {
+    display: grid;
+    width: 100%;
+    max-width: 100rem;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 21rem);
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "header header"
+      "feedback feedback"
+      "steps notes"
+      "steps controls";
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .player-header {
+    position: relative;
+    grid-area: header;
+  }
+
+  .player-settings-feedback {
+    grid-area: feedback;
+  }
+
+  .player-steps {
+    grid-area: steps;
+    width: 100%;
+    padding-right: clamp(1rem, 3vw, 3rem);
+    padding-left: clamp(1rem, 3vw, 3rem);
+  }
+
+  #step-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    align-content: start;
+    gap: 0.5rem 1rem;
+  }
+
+  #step-list > li {
+    min-width: 0;
+  }
+
+  #step-list .step-item {
+    height: 100%;
+  }
+
+  #step-notes-section {
+    width: 100%;
+    height: auto;
+    min-height: 5rem;
+    grid-area: notes;
+    border-top: 0;
+    border-left: 1px solid rgb(255 255 255 / 10%);
+    padding: 1rem;
+  }
+
+  .player-controls {
+    display: grid;
+    grid-area: controls;
+    align-content: start;
+    gap: 0.75rem;
+    border-top: 0;
+    border-left: 1px solid var(--app-border);
+    padding: 0.75rem 1rem max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .player-controls > div:first-child {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .player-controls [role='group'][aria-label='Playback speed'] {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step-duration-indicator {
+    transition: none !important;
+  }
+}

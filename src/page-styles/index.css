@@ -1,0 +1,37 @@
+.title-mark {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.title-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+@media (orientation: landscape), (min-width: 768px) {
+  #home-main {
+    padding: 2rem;
+  }
+
+  #home-card {
+    display: grid;
+    max-width: 72rem;
+    grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
+    align-items: center;
+    gap: 3rem;
+    padding: clamp(2rem, 6vw, 5rem);
+  }
+
+  #home-card > div:last-child {
+    margin-top: 0;
+  }
+}

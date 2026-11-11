@@ -1,0 +1,16 @@
+player:
+  include_korean_techniques: false
+  display_korean_stance_names: false
+  display_move_technique: true
+  display_move_direction: true
+  display_move_stance: true
+  display_move_notes: true
+  display_form_details: true
+  display_new_moves: false
+  read_move_direction: true
+  read_move_technique: true
+  read_move_stance: true
+  read_kihap: true
+  read_step_number: false
+  voice: browser-default
+  volume: 0.75

@@ -1,43 +1,120 @@
 name: Taegeuk Sam Jang
-korean: null
+korean: 태극 3장
 group: Taegeuk
 number: 3
-meaning: null
-trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
-  parallel lines. On each line, a 180 degree turn is performed.
-rank: null
+meaning: Fire and Sun (Ri)
+trigram: ☲
+rank: 6th Geup
 lines: 3
-movement_count: 4
+movement_count: 20
 techniques_introduced:
-  - neck-high knifehand strike (sometimes called a "neck slice")
-  - knifehand outward block
-  - a front kick followed by a double-punch (seen first at the beginning of the
-    form)
-  - a low block, kick, punch combination (seen at the conclusion of the form)
+  - Back stance (Dwit kubi)
+  - Single knifehand block (Hansonnal makki)
+  - Knifehand neck strike (Sonnal mok chigi)
+  - Double middle punch (Dubeon jireugi)
 movements:
-  - step: "1"
-    direction: null
-    stance: null
-    technique: neck-high knifehand strike (sometimes called a "neck slice")
+  - step: 1
+    direction: Turn left 90°
+    stance: Left walking stance (Ap seogi)
+    technique: Left low block (Arae makki)
     notes: null
-  - step: "2"
-    direction: null
-    stance: null
-    technique: knifehand outward block
+  - step: 2
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right-left double middle punch (Dubeon jireugi)
+    notes: "Kick and double punch are executed in continuous sequence."
+  - step: 3
+    direction: Turn right 180°
+    stance: Right walking stance (Ap seogi)
+    technique: Right low block (Arae makki)
     notes: null
-  - step: "3"
-    direction: null
-    stance: null
-    technique: a front kick followed by a double-punch (seen first at the beginning
-      of the form)
+  - step: 4
+    direction: Left front snap kick (Ap chagi), step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left-right double middle punch (Dubeon jireugi)
+    notes: "Kick and double punch are executed in continuous sequence."
+  - step: 5
+    direction: Turn left 90° (toward front)
+    stance: Left walking stance (Ap seogi)
+    technique: Right knifehand neck strike (Sonnal mok chigi)
     notes: null
-  - step: "4"
-    direction: null
-    stance: null
-    technique: a low block, kick, punch combination (seen at the conclusion of the form)
+  - step: 6
+    direction: Step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Left knifehand neck strike (Sonnal mok chigi)
     notes: null
+  - step: 7
+    direction: Turn left 90°
+    stance: Left back stance (Dwit kubi)
+    technique: Left single knifehand block (Hansonnal makki)
+    notes: null
+  - step: 8
+    direction: Shift weight forward (in place)
+    stance: Left front stance (Ap kubi)
+    technique: Right middle punch (Momtong jireugi)
+    notes: "The front foot slides slightly forward to transition from back stance to front stance."
+  - step: 9
+    direction: Turn right 180°
+    stance: Right back stance (Dwit kubi)
+    technique: Right single knifehand block (Hansonnal makki)
+    notes: null
+  - step: 10
+    direction: Shift weight forward (in place)
+    stance: Right front stance (Ap kubi)
+    technique: Left middle punch (Momtong jireugi)
+    notes: "The front foot slides slightly forward to transition from back stance to front stance."
+  - step: 11
+    direction: Turn left 90° (toward front)
+    stance: Left walking stance (Ap seogi)
+    technique: Right inside middle block (Momtong an makki)
+    notes: null
+  - step: 12
+    direction: Step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Left inside middle block (Momtong an makki)
+    notes: null
+  - step: 13
+    direction: Turn left 270°
+    stance: Left walking stance (Ap seogi)
+    technique: Left low block (Arae makki)
+    notes: null
+  - step: 14
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right-left double middle punch (Dubeon jireugi)
+    notes: "Kick and double punch are executed in continuous sequence."
+  - step: 15
+    direction: Turn right 180°
+    stance: Right walking stance (Ap seogi)
+    technique: Right low block (Arae makki)
+    notes: null
+  - step: 16
+    direction: Left front snap kick (Ap chagi), step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left-right double middle punch (Dubeon jireugi)
+    notes: "Kick and double punch are executed in continuous sequence."
+  - step: 17
+    direction: Turn left 90° (toward back)
+    stance: Left walking stance (Ap seogi)
+    technique: Left low block (Arae makki), then right middle punch (Momtong jireugi)
+    notes: "Block and punch are executed sequentially from the same stance."
+  - step: 18
+    direction: Step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Right low block (Arae makki), then left middle punch (Momtong jireugi)
+    notes: "Block and punch are executed sequentially from the same stance."
+  - step: 19
+    direction: Left front snap kick (Ap chagi), step forward
+    stance: Left walking stance (Ap seogi)
+    technique: Left low block (Arae makki), then right middle punch (Momtong jireugi)
+    notes: "Kick, block, and punch are executed sequentially."
+  - step: 20
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right walking stance (Ap seogi)
+    technique: Right low block (Arae makki), then left middle punch (Momtong jireugi)
+    notes: "Kick, block, and punch are executed sequentially. Execute Kihap (yell) on the final punch."
 sources:
-  - title: "Wikipedia: Taegeuk Sam Jang"
-    url: https://en.wikipedia.org/wiki/Taegeuk_Sam_Jang
-    license: CC BY-SA 3.0
-notes: Draft dataset bootstrapped from Wikipedia article content.
+  - title: "Kukkiwon Standard Poomsae"
+    url: "https://www.kukkiwon.or.kr"
+    license: "Standard"
+notes: "Dataset aligned to Kukkiwon 20-step standard. Korean terminology added for data enrichment."

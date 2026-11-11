@@ -1,54 +1,122 @@
 name: Taegeuk Sa Jang
-korean: null
+korean: 태극 4장
 group: Taegeuk
 number: 4
-meaning: null
-trigram: The floor pattern (or yeon-mu) of each taegeuk poomsae is three
-  parallel lines. On each line, a 180 degree turn is performed.
-rank: null
+meaning: Thunder (Jin)
+trigram: ☳
+rank: 5th Geup
 lines: 3
-movement_count: 3
+movement_count: 20
 techniques_introduced:
-  - The form begins by introducing the double knifehand block, also called an
-    augmented outside knifehand block. This technique is a staple of subsequent
-    Taegeuk poomsae.
-  - The spearhead thrust, the side kick, and the swallowform strike (a
-    simultaneous knifehand high block and knifehand neck strike) are also
-    introduced in this form.
-  - Most notably, this poomsae places an increased emphasis on the advanced
-    technique of "chambering" for the next movement while still performing the
-    previous movement. In this context, the word chamber means to position one's
-    arms and legs in preparation for an upcoming movement. As an example, when
-    performing the final of two side kicks, the practitioner must chamber for a
-    double knifehand block while still in the process of completing the kick.
+  - Double knifehand block (Sonnal makki)
+  - Spearhand thrust (Pyeonsonkkeut sewo jjireugi)
+  - Swallow shape neck strike (Jebipoom mok chigi)
+  - Side kick (Yeop chagi)
+  - Outside middle block (Momtong bakkat makki)
+  - Backfist front strike (Deungjumeok ap chigi)
 movements:
-  - step: "1"
-    direction: null
-    stance: null
-    technique: The form begins by introducing the double knifehand block, also
-      called an augmented outside knifehand block. This technique is a staple of
-      subsequent Taegeuk poomsae.
+  - step: 1
+    direction: Turn left 90°
+    stance: Left back stance (Dwit kubi)
+    technique: Double knifehand middle block (Sonnal makki)
     notes: null
-  - step: "2"
-    direction: null
-    stance: null
-    technique: The spearhead thrust, the side kick, and the swallowform strike (a
-      simultaneous knifehand high block and knifehand neck strike) are also
-      introduced in this form.
+  - step: 2
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right spearhand thrust (Pyeonsonkkeut sewo jjireugi)
+    notes: "Left hand supports under the right elbow."
+  - step: 3
+    direction: Turn right 180°
+    stance: Right back stance (Dwit kubi)
+    technique: Double knifehand middle block (Sonnal makki)
     notes: null
-  - step: "3"
-    direction: null
-    stance: null
-    technique: Most notably, this poomsae places an increased emphasis on the
-      advanced technique of "chambering" for the next movement while still
-      performing the previous movement. In this context, the word chamber means
-      to position one's arms and legs in preparation for an upcoming movement.
-      As an example, when performing the final of two side kicks, the
-      practitioner must chamber for a double knifehand block while still in the
-      process of completing the kick.
+  - step: 4
+    direction: Step forward
+    stance: Left front stance (Ap kubi)
+    technique: Left spearhand thrust (Pyeonsonkkeut sewo jjireugi)
+    notes: "Right hand supports under the left elbow."
+  - step: 5
+    direction: Turn left 90° (toward front)
+    stance: Left front stance (Ap kubi)
+    technique: Left swallow shape neck strike (Jebipoom mok chigi)
+    notes: "Simultaneous left high knifehand block and right knifehand neck strike."
+  - step: 6
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Left reverse middle punch (Momtong baro jireugi)
+    notes: "Kick and punch are executed in continuous sequence."
+  - step: 7
+    direction: Left side kick (Yeop chagi)
+    stance: None (in motion)
+    technique: Left side kick (Yeop chagi)
+    notes: "Chamber for the next block while recovering the kicking leg."
+  - step: 8
+    direction: Right side kick (Yeop chagi), land forward
+    stance: Right back stance (Dwit kubi)
+    technique: Double knifehand middle block (Sonnal makki)
+    notes: "Execute the double knifehand block immediately upon landing."
+  - step: 9
+    direction: Turn left 270°
+    stance: Left back stance (Dwit kubi)
+    technique: Left outside middle block (Momtong bakkat makki)
+    notes: "Pivot on the right foot, turning counter-clockwise."
+  - step: 10
+    direction: Right front snap kick (Ap chagi), retract foot back
+    stance: Left back stance (Dwit kubi)
+    technique: Right inside middle block (Momtong an makki)
+    notes: "After kicking, the right foot returns to its starting position."
+  - step: 11
+    direction: Turn right 180°
+    stance: Right back stance (Dwit kubi)
+    technique: Right outside middle block (Momtong bakkat makki)
     notes: null
+  - step: 12
+    direction: Left front snap kick (Ap chagi), retract foot back
+    stance: Right back stance (Dwit kubi)
+    technique: Left inside middle block (Momtong an makki)
+    notes: "After kicking, the left foot returns to its starting position."
+  - step: 13
+    direction: Turn left 90° (toward back)
+    stance: Left front stance (Ap kubi)
+    technique: Left swallow shape neck strike (Jebipoom mok chigi)
+    notes: "Simultaneous left high knifehand block and right knifehand neck strike."
+  - step: 14
+    direction: Right front snap kick (Ap chagi), step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right backfist front strike (Deungjumeok ap chigi)
+    notes: "Strike to the philtrum (face level)."
+  - step: 15
+    direction: Turn left 90°
+    stance: Left walking stance (Ap seogi)
+    technique: Left outside middle block (Momtong bakkat makki)
+    notes: null
+  - step: 16
+    direction: No step (in place)
+    stance: Left walking stance (Ap seogi)
+    technique: Right reverse middle punch (Momtong baro jireugi)
+    notes: null
+  - step: 17
+    direction: Turn right 180°
+    stance: Right walking stance (Ap seogi)
+    technique: Right outside middle block (Momtong bakkat makki)
+    notes: null
+  - step: 18
+    direction: No step (in place)
+    stance: Right walking stance (Ap seogi)
+    technique: Left reverse middle punch (Momtong baro jireugi)
+    notes: null
+  - step: 19
+    direction: Turn left 90° (toward back)
+    stance: Left front stance (Ap kubi)
+    technique: Left inside middle block (Momtong an makki), then right-left double middle punch (Dubeon jireugi)
+    notes: "Block and double punch are executed sequentially from the same stance."
+  - step: 20
+    direction: Step forward
+    stance: Right front stance (Ap kubi)
+    technique: Right inside middle block (Momtong an makki), then left-right double middle punch (Dubeon jireugi)
+    notes: "Execute Kihap (yell) on the final punch. Hold stance until 'Baro' command."
 sources:
-  - title: "Wikipedia: Taegeuk Sa Jang"
-    url: https://en.wikipedia.org/wiki/Taegeuk_Sa_Jang
-    license: CC BY-SA 3.0
-notes: Draft dataset bootstrapped from Wikipedia article content.
+  - title: "Kukkiwon Standard Poomsae"
+    url: "https://www.kukkiwon.or.kr"
+    license: "Standard"
+notes: "Dataset aligned to Kukkiwon 20-step standard. Korean terminology added for data enrichment."
