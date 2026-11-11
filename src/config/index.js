@@ -5,6 +5,8 @@ const YAML = require('yaml');
 const configPath = path.join(__dirname, 'config.yml');
 const rawConfig = fs.readFileSync(configPath, 'utf8');
 const loadedConfig = YAML.parse(rawConfig);
+const playerConfigPath = path.join(__dirname, 'player_config.yml');
+const playerConfig = YAML.parse(fs.readFileSync(playerConfigPath, 'utf8'));
 
 const defaults = {
   app: {
@@ -24,6 +26,7 @@ const defaults = {
   data: {
     forms_dir: 'data/forms',
   },
+  player: playerConfig.player,
   logging: {
     level: 'info',
   },

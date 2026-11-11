@@ -27,24 +27,26 @@ const renderMovements = movements => movements.map((movement, index) => `
   <li>
     <button
       type="button"
-      class="step-item relative w-full border-l-2 border-transparent px-4 py-4 text-left text-white/40 transition-all duration-300 ease-in-out hover:text-white/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
+      class="step-item relative w-full overflow-hidden border-l-2 border-transparent px-4 py-4 text-left text-white/40 transition-all duration-300 ease-in-out hover:text-white/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
       data-index="${index}"
       data-step="${escapeHtml(movement.step)}"
       data-direction="${escapeHtml(movement.direction)}"
       data-stance="${escapeHtml(movement.stance)}"
       data-technique="${escapeHtml(movement.technique)}"
       data-notes="${escapeHtml(movement.notes || '')}"
+      data-kihap="${hasKihapCue(movement)}"
       aria-pressed="false"
     >
       <span class="flex items-start justify-between gap-3">
-        <span class="min-w-0 flex-1 text-sm font-normal text-white/50">${escapeHtml(movement.direction)}</span>
+        <span data-movement-direction class="min-w-0 flex-1 text-sm font-normal text-white/50">${escapeHtml(movement.direction)}</span>
         <span class="shrink-0 text-right text-xs font-medium uppercase tracking-wide text-white/40">Step ${escapeHtml(movement.step)}</span>
       </span>
-      <span class="mt-1 block text-lg font-bold">${escapeHtml(movement.technique)}</span>
+      <span data-movement-technique class="mt-1 block text-lg font-bold">${escapeHtml(movement.technique)}</span>
       <span class="mt-1 flex items-center justify-between gap-3">
-        <span class="min-w-0 flex-1 text-sm font-normal text-white/50">${escapeHtml(movement.stance)}</span>
+        <span data-movement-stance class="min-w-0 flex-1 text-sm font-normal text-white/50">${escapeHtml(movement.stance)}</span>
         ${hasKihapCue(movement) ? '<span class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#448AFF] text-sm leading-5 text-[#448AFF]" role="img" aria-label="Kihap">&#x1F5E3;&#xFE0E;</span>' : ''}
       </span>
+      <span class="step-duration-indicator pointer-events-none absolute bottom-0 left-0 h-0.5 w-0 bg-[#448AFF] opacity-0 transition-[width] ease-linear" aria-hidden="true"></span>
     </button>
   </li>
 `).join('');
@@ -84,6 +86,10 @@ module.exports = app => {
 
     const substitutions = {
       formName: escapeHtml(form.name),
+      formFile: encodeURIComponent(selectedForm.file),
+      playerSettings: JSON.stringify(config.player).replace(/</g, '\\u003c'),
+      playerVolume: escapeHtml(config.player.volume),
+      playerVolumePercent: escapeHtml(Math.round(config.player.volume * 100)),
       formKorean: escapeHtml(form.korean || ''),
       formMeaning: escapeHtml(form.meaning || ''),
       formTrigramLabel: form.trigram

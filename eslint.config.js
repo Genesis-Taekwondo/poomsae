@@ -32,4 +32,14 @@ module.exports = [
       },
     },
   },
+  {
+    files: ['public/**/*.js'],
+    languageOptions: {
+      globals: {
+        document: 'readonly',
+        window: 'readonly',
+        Event: 'readonly',
+      },
+    },
+  },
 ];

@@ -49,6 +49,12 @@ npm run start
 
 By default, the application uses port 3000. Open your browser to http://localhost:3000 once the server has started to view the application.
 
+Player Settings
+---------------
+
+Use the gear button in the form player to configure which movement details are shown, including whether Korean technique and stance names are displayed. Changes are saved automatically in the current browser and apply when returning to the player. Default settings are defined in `src/config/player_config.yml`.
+
+The form player uses browser speech synthesis to narrate the current movement during playback. Narration volume defaults to 75% when a voice is available; use the volume slider between the play and next-step controls to adjust it. The Voice setting lists installed browser voices, supports None, and uses the browser's default voice when available; if no voices are available, narration is disabled until one is selected. Narration settings control whether step numbers, move direction, technique, stance, and kihap are spoken. During playback, a progress line at the bottom of the active move fills over the configured playback interval.
 
 Notes:
 - The test harness requires the project dependencies (dev deps) to be installed.

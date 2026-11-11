@@ -17,14 +17,19 @@
           <a href="/form-selection" class="min-w-0 truncate whitespace-nowrap text-2xl font-semibold leading-tight focus:outline-none focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-white" style="font-family: 'Protest Revolution', sans-serif;" aria-label="Back to form selection">
             {{formName}} <span class="text-xl text-white/70">/ {{formKorean}}</span>
           </a>
-          <a href="/" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white/70 transition-colors hover:border-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Home">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="m3 10 9-7 9 7" />
-              <path d="M5 9v12h14V9M9 21v-7h6v7" />
-            </svg>
-          </a>
+          <span class="flex shrink-0 items-center gap-2">
+            <a href="/settings?form={{formFile}}" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white/70 transition-colors hover:border-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Settings">
+              <span class="text-2xl leading-none" aria-hidden="true">&#x2699;&#xFE0E;</span>
+            </a>
+            <a href="/" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white/70 transition-colors hover:border-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Home">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m3 10 9-7 9 7" />
+                <path d="M5 9v12h14V9M9 21v-7h6v7" />
+              </svg>
+            </a>
+          </span>
         </nav>
-        <div class="mt-2 flex flex-wrap items-center text-xs text-white/70" aria-label="Form details">
+        <div id="form-details" class="mt-2 flex flex-wrap items-center text-xs text-white/70" aria-label="Form details">
           <span class="py-0.5">{{formRank}}</span>
           <span class="mx-4 h-3.5 shrink-0 border-l border-white/25" aria-hidden="true"></span>
           {{formTrigramLabel}}
@@ -32,8 +37,9 @@
           <span class="mx-4 h-3.5 shrink-0 border-l border-white/25" aria-hidden="true"></span>
           <span class="py-0.5">{{movementCount}} steps</span>
         </div>
-        <p class="mt-1 truncate text-xs text-white/40" title="Techniques introduced">Introduces: {{techniquesIntroduced}}</p>
+        <p id="new-moves-introduced" class="mt-1 truncate text-xs text-white/40" title="Techniques introduced">Introduces: {{techniquesIntroduced}}</p>
       </header>
+      <p id="player-settings-feedback" class="hidden px-5 pt-2 text-xs text-rose-300" role="alert"></p>
 
       <section class="step-list-scroll min-h-0 flex-1 overflow-y-auto px-0 py-3" aria-label="Movement steps">
         <ol id="step-list" class="space-y-2">
@@ -41,7 +47,7 @@
         </ol>
       </section>
 
-      <section class="h-20 shrink-0 overflow-hidden border-t border-white/10 px-5 py-2" aria-label="Step notes" aria-live="polite">
+      <section id="step-notes-section" class="h-20 shrink-0 overflow-hidden border-t border-white/10 px-5 py-2" aria-label="Step notes" aria-live="polite">
         <div id="notes-row" class="hidden">
           <p class="text-xs text-white/40">Notes</p>
           <p id="context-notes" class="notes-content mt-1 text-sm text-white/90"></p>
@@ -58,6 +64,23 @@
           <button id="play-toggle" type="button" class="inline-flex min-h-12 min-w-12 items-center justify-center rounded-full bg-white text-lg text-[#111122] transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111122]" aria-label="Play steps" aria-pressed="false">
             <span id="play-icon" aria-hidden="true">&#9654;</span>
           </button>
+          <div class="flex min-w-0 flex-col items-center gap-0.5">
+            <div class="flex min-w-0 items-center gap-2">
+              <button id="mute-toggle" type="button" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/60 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Mute narration" aria-pressed="false">
+                <svg id="volume-icon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+                  <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+                  <path d="M19 5a10 10 0 0 1 0 14" />
+                </svg>
+                <svg id="muted-icon" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+                  <path d="m16 9 5 6m0-6-5 6" />
+                </svg>
+              </button>
+              <input id="volume-control" data-setting="volume" type="range" min="0" max="1" step="0.01" value="{{playerVolume}}" class="h-1.5 w-16 cursor-pointer accent-white sm:w-20" aria-label="Narration volume" aria-valuetext="{{playerVolumePercent}}%" />
+            </div>
+            <span id="active-voice-label" class="max-w-28 truncate text-[9px] leading-none text-white/40" aria-live="polite"></span>
+          </div>
           <button id="next-step" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white/70 transition-colors hover:border-white/60 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Next step">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="m9 18 6-6-6-6" />
@@ -69,7 +92,7 @@
           <input id="step-progress" type="range" min="1" max="{{movementCount}}" value="1" class="h-1.5 min-w-0 flex-1 cursor-pointer accent-white" />
           <output id="progress-label" for="step-progress" class="w-12 text-right text-xs tabular-nums text-white/50">1 / {{movementCount}}</output>
         </div>
-        <div class="mt-2 flex items-center justify-center gap-1" role="group" aria-label="Playback speed">
+        <div class="mt-2 flex w-full items-center justify-center gap-1" role="group" aria-label="Playback speed">
           <button type="button" class="speed-option rounded-md px-1.5 py-1.5 text-xs text-white/50 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" data-speed="0.1" aria-pressed="false">0.1x</button>
           <button type="button" class="speed-option rounded-md px-1.5 py-1.5 text-xs text-white/50 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" data-speed="0.3" aria-pressed="false">0.3x</button>
           <button type="button" class="speed-option rounded-md px-1.5 py-1.5 text-xs text-white/50 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white" data-speed="0.5" aria-pressed="false">0.5x</button>
@@ -82,6 +105,8 @@
         </div>
       </footer>
     </main>
+    <script id="player-settings-defaults" type="application/json">{{playerSettings}}</script>
+    <script src="/player-settings.js"></script>
     <script>
       (() => {
         const steps = Array.from(document.querySelectorAll('.step-item'));
@@ -89,13 +114,151 @@
         const progress = document.getElementById('step-progress');
         const playButton = document.getElementById('play-toggle');
         const playIcon = document.getElementById('play-icon');
-        const intervalMs = 2500;
+        const volumeControl = document.getElementById('volume-control');
+        const muteButton = document.getElementById('mute-toggle');
+        const volumeIcon = document.getElementById('volume-icon');
+        const mutedIcon = document.getElementById('muted-icon');
+        const playerFeedback = document.getElementById('player-settings-feedback');
+        const intervalMs = 1000;
         let currentIndex = 0;
         let speed = 1;
         let playbackTimer;
+        let indicatorTimer;
+        let lastUnmutedVolume = Number(volumeControl.value) || 1;
+        let isMuted = Number(volumeControl.value) === 0 || !hasActiveVoice();
+        let narrationUnavailableReported = false;
+
+        function getActiveVoice() {
+          if (!('speechSynthesis' in window)) return null;
+          const voices = window.speechSynthesis.getVoices();
+          const settings = window.poomsaePlayerSettings;
+          if (settings.voice === 'none' || voices.length === 0) return null;
+          if (settings.voice === 'browser-default') {
+            return voices.find(voice => voice.default) || voices[0] || null;
+          }
+          return voices.find(voice => voice.voiceURI === settings.voice) || null;
+        }
+
+        function hasActiveVoice() {
+          return Boolean(getActiveVoice());
+        }
+
+        const updateMuteControl = () => {
+          const voice = getActiveVoice();
+          const voiceUnavailable = !voice;
+          if (voiceUnavailable) {
+            isMuted = true;
+            volumeControl.value = '0';
+          }
+          muteButton.disabled = voiceUnavailable;
+          volumeControl.disabled = voiceUnavailable;
+          muteButton.classList.toggle('cursor-not-allowed', voiceUnavailable);
+          muteButton.classList.toggle('opacity-40', voiceUnavailable);
+          document.getElementById('active-voice-label').textContent = voice
+            ? `${voice.name} (${voice.lang})`
+            : 'None';
+          volumeControl.classList.toggle('is-muted', isMuted);
+          muteButton.setAttribute('aria-pressed', String(isMuted));
+          muteButton.setAttribute('aria-label', isMuted ? 'Unmute narration' : 'Mute narration');
+          volumeIcon.classList.toggle('hidden', isMuted);
+          mutedIcon.classList.toggle('hidden', !isMuted);
+          volumeControl.setAttribute(
+            'aria-valuetext',
+            `${Math.round(Number(volumeControl.value) * 100)}%${isMuted ? ', muted' : ''}`
+          );
+        };
+
+        const speakCurrentStep = () => {
+          if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+            if (!narrationUnavailableReported) {
+              playerFeedback.textContent = 'Speech narration is not supported in this browser.';
+              playerFeedback.classList.remove('hidden');
+              narrationUnavailableReported = true;
+            }
+            return;
+          }
+
+          const activeVoice = getActiveVoice();
+          if (!activeVoice) return false;
+
+          const step = steps[currentIndex];
+          const settings = window.poomsaePlayerSettings;
+          const technique = settings.include_korean_techniques
+            ? step.dataset.technique
+            : step.dataset.technique.replace(/\s*\([^)]*\)/g, '').trim();
+          const stance = settings.display_korean_stance_names
+            ? step.dataset.stance
+            : step.dataset.stance.replace(/\s*\([^)]*\)/g, '').trim();
+          const narration = [
+            settings.read_step_number ? `Step ${step.dataset.step}` : '',
+            settings.read_move_direction ? step.dataset.direction : '',
+            settings.read_move_technique ? technique : '',
+            settings.read_move_stance ? stance : '',
+            settings.read_kihap && step.dataset.kihap === 'true' ? 'Kihap!' : '',
+          ].filter(Boolean).join('. ');
+          if (!narration) return false;
+
+          window.speechSynthesis.cancel();
+          const utterance = new SpeechSynthesisUtterance(narration);
+          utterance.volume = isMuted ? 0 : Number(volumeControl.value);
+          utterance.rate = speed;
+          utterance.voice = activeVoice;
+          utterance.onend = () => {
+            if (playButton.getAttribute('aria-pressed') === 'true') scheduleNextStep();
+          };
+          utterance.onerror = event => {
+            if (event.error === 'canceled' || event.error === 'interrupted') return;
+            playerFeedback.textContent = 'Speech narration could not be played.';
+            playerFeedback.classList.remove('hidden');
+            if (playButton.getAttribute('aria-pressed') === 'true') scheduleNextStep();
+          };
+          window.speechSynthesis.speak(utterance);
+          return true;
+        };
+
+        const scheduleNextStep = () => {
+          playbackTimer = window.setTimeout(() => {
+            if (currentIndex >= steps.length - 1) {
+              setPlaying(false);
+              return;
+            }
+            setStep(currentIndex + 1);
+            if (!speakCurrentStep()) scheduleNextStep();
+          }, intervalMs / speed);
+        };
+
+        const resetStepDurationIndicators = () => {
+          window.clearTimeout(indicatorTimer);
+          document.querySelectorAll('.step-duration-indicator').forEach(indicator => {
+            indicator.style.transitionDuration = '0ms';
+            indicator.style.width = '0%';
+            indicator.classList.remove('opacity-100', 'step-duration-complete');
+          });
+        };
+
+        const startStepDurationIndicator = () => {
+          const indicator = steps[currentIndex].querySelector('.step-duration-indicator');
+          if (!indicator) return;
+
+          const interval = intervalMs / speed;
+          const completionFlash = Math.min(120, interval * 0.15);
+          const fillDuration = interval - completionFlash;
+          indicator.style.transitionDuration = '0ms';
+          indicator.style.width = '0%';
+          indicator.classList.remove('step-duration-complete');
+          indicator.classList.add('opacity-100');
+          window.requestAnimationFrame(() => {
+            indicator.style.transitionDuration = `${fillDuration}ms`;
+            indicator.style.width = '100%';
+          });
+          indicatorTimer = window.setTimeout(() => {
+            indicator.classList.add('step-duration-complete');
+          }, fillDuration);
+        };
 
         const setStep = (index, shouldScroll = true) => {
           if (!steps.length) return;
+          resetStepDurationIndicators();
           currentIndex = Math.max(0, Math.min(index, steps.length - 1));
           const activeStep = steps[currentIndex];
 
@@ -111,29 +274,33 @@
           });
 
           document.getElementById('context-notes').textContent = activeStep.dataset.notes || '';
-          document.getElementById('notes-row').classList.toggle('hidden', !activeStep.dataset.notes);
+          const settings = window.poomsaePlayerSettings;
+          document.getElementById('notes-row').classList.toggle(
+            'hidden',
+            !settings.display_move_notes || !activeStep.dataset.notes
+          );
           progress.value = String(currentIndex + 1);
           document.getElementById('progress-label').textContent = `${currentIndex + 1} / ${steps.length}`;
 
           if (shouldScroll) {
             activeStep.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
+          if (playButton.getAttribute('aria-pressed') === 'true') {
+            startStepDurationIndicator();
+          }
         };
 
         const setPlaying = playing => {
-          window.clearInterval(playbackTimer);
+          window.clearTimeout(playbackTimer);
+          resetStepDurationIndicators();
+          if ('speechSynthesis' in window) window.speechSynthesis.cancel();
           playButton.setAttribute('aria-pressed', String(playing));
           playButton.setAttribute('aria-label', playing ? 'Pause steps' : 'Play steps');
           playIcon.innerHTML = playing ? '&#10074;&#10074;' : '&#9654;';
 
           if (playing) {
-            playbackTimer = window.setInterval(() => {
-              if (currentIndex >= steps.length - 1) {
-                setPlaying(false);
-                return;
-              }
-              setStep(currentIndex + 1);
-            }, intervalMs / speed);
+            startStepDurationIndicator();
+            if (!speakCurrentStep()) scheduleNextStep();
           }
         };
 
@@ -141,6 +308,25 @@
         document.getElementById('next-step').addEventListener('click', () => setStep(currentIndex + 1));
         playButton.addEventListener('click', () => {
           setPlaying(playButton.getAttribute('aria-pressed') !== 'true');
+        });
+        muteButton.addEventListener('click', () => {
+          if (muteButton.disabled) return;
+          isMuted = !isMuted;
+          if (isMuted) {
+            lastUnmutedVolume = Number(volumeControl.value) || lastUnmutedVolume;
+            volumeControl.value = '0';
+          } else {
+            volumeControl.value = String(lastUnmutedVolume);
+          }
+          updateMuteControl();
+          if (playButton.getAttribute('aria-pressed') === 'true') setPlaying(true);
+        });
+        volumeControl.addEventListener('input', () => {
+          const volume = Number(volumeControl.value);
+          isMuted = volume === 0;
+          if (!isMuted) lastUnmutedVolume = volume;
+          updateMuteControl();
+          if (playButton.getAttribute('aria-pressed') === 'true') setPlaying(true);
         });
         progress.addEventListener('input', () => setStep(Number(progress.value) - 1));
         steps.forEach((step, index) => step.addEventListener('click', () => setStep(index, false)));
@@ -170,6 +356,15 @@
           }
         });
 
+        window.addEventListener('poomsae:settings-changed', () => setStep(currentIndex, false));
+        window.addEventListener('poomsae:settings-changed', () => {
+          updateMuteControl();
+          if (playButton.getAttribute('aria-pressed') === 'true') setPlaying(true);
+        });
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.addEventListener('voiceschanged', updateMuteControl);
+        }
+        updateMuteControl();
         setStep(0, false);
       })();
     </script>
