@@ -28,6 +28,8 @@ describe('App', function () {
   it('GET /styles.css serves a static asset', async function () {
     const res = await request(app).get('/styles.css');
     assert.strictEqual(res.status, 200);
+    assert.ok(res.text.includes('@media (orientation: landscape), (min-width: 768px)'));
+    assert.ok(res.text.includes('grid-template-areas'));
   });
 
   it('GET /taeguk-hover.css serves Taeguk hover styles', async function () {
@@ -72,13 +74,17 @@ describe('App', function () {
     assert.ok(res.text.includes('Loading browser voices...'));
   });
 
-  it('GET /form-selection responds with 200 and contains a Back Home button', async function () {
+  it('GET /form-selection responds with 200 and contains a Home button', async function () {
     const res = await request(app).get('/form-selection');
     assert.strictEqual(res.status, 200);
-    assert.ok(res.text.includes('Back Home'));
+    assert.ok(res.text.includes('aria-label="Home"'));
+    assert.ok(res.text.includes('<h1 class="text-2xl font-semibold leading-tight"'));
+    assert.ok(!res.text.includes('Back Home'));
+    assert.ok(!res.text.includes('border-t border-slate-800'));
+    assert.ok(res.text.includes('rounded-xl border border-white/10 bg-white/[0.03]'));
     assert.ok(res.text.includes('Taegeuk Il Jang'));
     assert.ok(res.text.includes('/form-player?form=data%2Fforms%2Ftaeguk%2Ftaegeuk_il_jang.yml'));
-    assert.ok(res.text.includes('rounded-lg border border-slate-800 bg-slate-950'));
+    assert.ok(res.text.includes('rounded-lg border border-white/10 bg-white/[0.05]'));
     assert.ok(!res.text.includes('{{formGroups}}'));
     [
       'taeguk-hover-il-jang',
@@ -134,7 +140,7 @@ describe('App', function () {
     assert.strictEqual((res.text.match(/h-11 w-11 items-center justify-center rounded-full border border-white\/25/g) || []).length, 4);
     assert.strictEqual((res.text.match(/mx-4 h-3\.5 shrink-0 border-l border-white\/25/g) || []).length, 3);
     assert.strictEqual((res.text.match(/width="24" height="24"/g) || []).length, 1);
-    assert.ok(res.text.includes('class="step-list-scroll min-h-0 flex-1 overflow-y-auto px-0 py-3"'));
+    assert.ok(res.text.includes('class="player-steps step-list-scroll min-h-0 flex-1 overflow-y-auto px-0 py-3"'));
     assert.ok(res.text.includes('class="step-item relative w-full'));
     assert.ok(res.text.includes('data-movement-technique'));
     assert.ok(res.text.includes('data-movement-direction'));

@@ -161,6 +161,153 @@ body {
     animation: saved-flash 1.6s ease-out;
   }
 
+  @media (orientation: landscape), (min-width: 768px) {
+    #home-main {
+      padding: 2rem;
+    }
+
+    #home-card {
+      display: grid;
+      max-width: 72rem;
+      grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
+      align-items: center;
+      gap: 3rem;
+      padding: clamp(2rem, 6vw, 5rem);
+    }
+
+    #home-card > div:last-child {
+      margin-top: 0;
+    }
+
+    #form-selection-main {
+      max-width: none;
+      border-right: 0;
+      border-left: 0;
+    }
+
+    #form-selection-content {
+      max-width: 88rem;
+      padding: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    #form-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+      align-items: start;
+      gap: 1.25rem;
+    }
+
+    #settings-main {
+      max-width: min(100%, 88rem);
+      min-height: 0;
+    }
+
+    #settings-content {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: auto auto auto;
+      align-content: start;
+      gap: 1rem 2rem;
+    }
+
+    #settings-content > .settings-feedback {
+      grid-column: 1 / -1;
+    }
+
+    #display-settings {
+      grid-column: 1;
+      grid-row: 2 / span 2;
+    }
+
+    #voice-settings {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    #narration-settings {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    main[data-form-name] {
+      display: grid;
+      width: 100%;
+      max-width: 100rem;
+      min-height: 0;
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, 21rem);
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+      grid-template-areas:
+        "header header"
+        "feedback feedback"
+        "steps notes"
+        "steps controls";
+      border-right: 0;
+      border-left: 0;
+    }
+
+    .player-header {
+      position: relative;
+      grid-area: header;
+    }
+
+    .player-settings-feedback {
+      grid-area: feedback;
+    }
+
+    .player-steps {
+      grid-area: steps;
+      width: 100%;
+      padding-right: clamp(1rem, 3vw, 3rem);
+      padding-left: clamp(1rem, 3vw, 3rem);
+    }
+
+    #step-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+      align-content: start;
+      gap: 0.5rem 1rem;
+    }
+
+    #step-list > li {
+      min-width: 0;
+    }
+
+    #step-list .step-item {
+      height: 100%;
+    }
+
+    #step-notes-section {
+      width: 100%;
+      height: auto;
+      min-height: 5rem;
+      grid-area: notes;
+      border-top: 0;
+      border-left: 1px solid rgb(255 255 255 / 10%);
+      padding: 1rem;
+    }
+
+    .player-controls {
+      grid-area: controls;
+      display: grid;
+      align-content: start;
+      gap: 0.75rem;
+      border-top: 0;
+      border-left: 1px solid rgb(255 255 255 / 15%);
+      padding: 0.75rem 1rem max(0.75rem, env(safe-area-inset-bottom));
+    }
+
+    .player-controls > div:first-child {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0;
+    }
+
+    .player-controls [role='group'][aria-label='Playback speed'] {
+      flex-wrap: wrap;
+    }
+  }
+
   @keyframes saved-flash {
     0%,
     25% {

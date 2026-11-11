@@ -57,8 +57,8 @@ module.exports = app => {
   app.get('/form-selection', (req, res) => {
     const visibleGroups = getVisibleFormGroups();
     const sectionsHtml = visibleGroups.map(group => `
-      <li class="rounded-lg border border-slate-800 bg-slate-900 p-4 sm:p-5">
-        <h1 class="text-lg tracking-tight text-slate-100" style="font-family: 'Protest Revolution', sans-serif;">${escapeHtml(group.label)}</h1>
+      <li class="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5">
+        <h2 class="text-lg tracking-tight text-white/90" style="font-family: 'Protest Revolution', sans-serif;">${escapeHtml(group.label)}</h2>
         <ul class="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           ${group.entries.map(entry => {
     const formSlug = entry.name
@@ -69,11 +69,11 @@ module.exports = app => {
       ? taegukHoverClasses[formSlug] || ''
       : '';
     const hoverEffectClass = hoverClass ? 'taeguk-form-hover' : '';
-    const hoverBackgroundClass = hoverClass ? '' : 'hover:bg-slate-700';
+    const hoverBackgroundClass = hoverClass ? '' : 'hover:bg-white/10';
 
     return `
             <li>
-              <a href="/form-player?form=${encodeURIComponent(entry.file)}" class="block rounded-md border border-slate-700 bg-slate-800 px-4 py-3 text-sm font-medium text-slate-100 shadow-sm transition-colors hover:border-teal-700 ${hoverEffectClass} ${hoverClass} ${hoverBackgroundClass} focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 sm:text-base">
+              <a href="/form-player?form=${encodeURIComponent(entry.file)}" class="block rounded-lg border border-white/10 bg-white/[0.05] px-4 py-3 text-sm font-medium text-white/90 shadow-sm transition-colors hover:border-white/30 ${hoverEffectClass} ${hoverClass} ${hoverBackgroundClass} focus:outline-none focus-visible:ring-2 focus-visible:ring-white sm:text-base">
               <span class="relative z-10">${escapeHtml(entry.name)}</span>
               </a>
             </li>
