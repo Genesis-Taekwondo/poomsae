@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build:css": "tailwindcss -i ./src/input.css -o ./public/styles.css",
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/styles.css && node src/build-css.js",
     "lint": "eslint . --ext .js",
     "test": "mocha --exit"
   },

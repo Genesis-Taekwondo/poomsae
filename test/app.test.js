@@ -28,15 +28,30 @@ describe('App', function () {
   it('GET /styles.css serves a static asset', async function () {
     const res = await request(app).get('/styles.css');
     assert.strictEqual(res.status, 200);
-    assert.ok(res.text.includes('@media (orientation: landscape), (min-width: 768px)'));
-    assert.ok(res.text.includes('grid-template-areas'));
+    assert.ok(res.text.includes('.display-font'));
+    assert.ok(res.text.includes('.toggle-track'));
+    assert.ok(res.text.includes('#volume-control'));
+    assert.ok(res.text.includes('.taeguk-form-hover'));
   });
 
-  it('GET /taeguk-hover.css serves Taeguk hover styles', async function () {
-    const res = await request(app).get('/taeguk-hover.css');
-    assert.strictEqual(res.status, 200);
-    assert.ok(res.text.includes('.taeguk-hover-pal-jang'));
-    assert.ok(res.text.includes('rgb(78 52 46 / 50%)'));
+  it('serves all authored styles from a single stylesheet', async function () {
+    const pages = ['index', 'form-selection', 'form-player', 'settings'];
+    for (const page of pages) {
+      const url = {
+        index: '/',
+        'form-player': '/form-player?form=data%2Fforms%2Ftaeguk%2Ftaegeuk_il_jang.yml',
+      }[page] || `/${page}`;
+      const res = await request(app).get(url);
+      assert.strictEqual(res.status, 200);
+      assert.ok(res.text.includes('href="/styles.css"'));
+      assert.ok(!res.text.includes(`href="/${page}.css"`));
+    }
+
+    const styles = await request(app).get('/styles.css');
+    assert.strictEqual(styles.status, 200);
+    assert.ok(styles.text.includes('#volume-control'));
+    assert.ok(styles.text.includes('.taeguk-hover-pal-jang'));
+    assert.ok(styles.text.includes('.toggle-track'));
   });
 
   it('loads the configured player settings defaults', function () {
@@ -78,7 +93,7 @@ describe('App', function () {
     const res = await request(app).get('/form-selection');
     assert.strictEqual(res.status, 200);
     assert.ok(res.text.includes('aria-label="Home"'));
-    assert.ok(res.text.includes('<h1 class="text-2xl font-semibold leading-tight"'));
+    assert.ok(res.text.includes('<h1 class="display-font text-2xl font-semibold leading-tight"'));
     assert.ok(!res.text.includes('Back Home'));
     assert.ok(!res.text.includes('border-t border-slate-800'));
     assert.ok(res.text.includes('rounded-xl border border-white/10 bg-white/[0.03]'));

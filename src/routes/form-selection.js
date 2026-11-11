@@ -58,7 +58,7 @@ module.exports = app => {
     const visibleGroups = getVisibleFormGroups();
     const sectionsHtml = visibleGroups.map(group => `
       <li class="rounded-xl border border-white/10 bg-white/[0.03] p-4 sm:p-5">
-        <h2 class="text-lg tracking-tight text-white/90" style="font-family: 'Protest Revolution', sans-serif;">${escapeHtml(group.label)}</h2>
+        <h2 class="display-font text-lg tracking-tight text-white/90">${escapeHtml(group.label)}</h2>
         <ul class="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           ${group.entries.map(entry => {
     const formSlug = entry.name
